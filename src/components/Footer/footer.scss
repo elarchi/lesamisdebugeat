@@ -1,0 +1,17 @@
+.footer__div {
+  border-top: black solid 2px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 120px;
+
+  img {
+    height: 50px;
+    width: 180px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}

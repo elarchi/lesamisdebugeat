@@ -1,0 +1,35 @@
+.header__div {
+  margin-bottom: 50px;
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 16px;
+    font-style: italic;
+  }
+  .header-title__div {
+    border-bottom: solid 2px black;
+  }
+  .header__nav {
+    background-color: #75913d;
+    height: 55px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    button {
+      height: 30px;
+      background-color: #75913d;
+      border: none;
+      color: white;
+      width: 200px;
+    }
+    .separator__button {
+      height: 30px;
+      width: 200px;
+      background-color: #75913d;
+      border: none;
+      color: white;
+      border-right: solid 1px white;
+    }
+  }
+}
