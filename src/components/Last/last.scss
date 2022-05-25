@@ -16,16 +16,22 @@
   .cards__div {
     display: flex;
     gap: 30px;
-    hr {
-      border-top: 2px solid black;
-      margin-bottom: 20px;
-    }
+    .card__div {
+      hr {
+        border-top: 2px solid black;
+        margin-bottom: 20px;
+      }
 
-    img {
-      width: 100%;
-      object-fit: cover;
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
+      img {
+        width: 100%;
+        object-fit: cover;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+      }
+    }
+    .card__div:hover {
+      text-decoration: underline;
+      cursor: pointer;
     }
   }
 

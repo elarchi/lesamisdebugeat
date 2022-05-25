@@ -17,13 +17,13 @@ const Home = () => {
       url: "https://res.cloudinary.com/dn7zdnm89/image/upload/v1653503433/lesAmisDuPaysDeBugeat/L1000383_omdo8o.png",
     },
     middle: {
-      title: "Evènement 2",
-      text: "text évènement 2",
+      title: "Atelier peinture",
+      text: "Ce mercredi l'association des Amis du Pays de Bugeat vous propose de vous mettre à la peinture, de quoi mettre de la couleur dans votre quotidien. L'inscription se fait via le lien de l'évènement.",
       url: "https://res.cloudinary.com/dn7zdnm89/image/upload/v1653503433/lesAmisDuPaysDeBugeat/L1000383_omdo8o.png",
     },
     right: {
       title: "Election du nouveau bureau",
-      text: "Ca y est, le bureau de l'association des Amis du Pays de Bugeat est constitué pour cette nouvelle année 2022 ! Venez vite le rencontrer aux portes ouvertes samedi prochain !",
+      text: "Ca y est, le bureau de l'association des Amis du Pays de Bugeat est constitué pour cette nouvelle année 2022. Venez vite le rencontrer aux portes ouvertes samedi 26 mai !",
       url: "https://res.cloudinary.com/dn7zdnm89/image/upload/v1653503428/lesAmisDuPaysDeBugeat/L1000093_px2zuy.png",
     },
   };
