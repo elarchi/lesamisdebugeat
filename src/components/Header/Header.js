@@ -1,5 +1,6 @@
 //Importations des feuilles de style
 import "./header.scss";
+
 const Header = () => {
   return (
     <div className="header__div container">
@@ -24,25 +25,6 @@ const Header = () => {
         <h2>Faire connaître et promouvoir le pays de Bugeat</h2>
       </div>
       <nav className="header__nav">
-        {/* <li>
-          <a href="#">ACCUEIL</a>
-        </li>
-        <li>
-          <a href="#">QUI SOMMES-NOUS ?</a>
-        </li>
-        <li>
-          <a href="#">NOUS REJOINDRE</a>
-        </li>
-        <li>
-          <a href="#">PUBLICATIONS</a>
-        </li>
-        <li>
-          <a href="#">ÉVÈNEMENTS</a>
-        </li>
-        <li>
-          <a href="#">CONTACT</a>
-        </li> */}
-
         <button className="separator__button">ACCUEIL</button>
         <button className="separator__button">QUI SOMMES-NOUS ?</button>
         <button className="separator__button">NOUS REJOINDRE</button>

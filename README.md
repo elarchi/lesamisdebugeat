@@ -1,3 +1,3 @@
 ## Packages
 
-yarn add sass react-router-dom
+yarn add sass react-router-dom swiper

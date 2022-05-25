@@ -1,5 +1,4 @@
 .header__div {
-  margin-bottom: 50px;
   h1 {
     font-size: 36px;
     font-weight: 300;
@@ -8,6 +7,7 @@
   h2 {
     font-size: 16px;
     font-style: italic;
+    margin-top: 20px;
   }
   .header-title__div {
     border-bottom: solid 2px black;
@@ -22,7 +22,14 @@
         height: 18px;
         object-fit: cover;
       }
+      img:hover {
+        cursor: pointer;
+      }
     }
+  }
+  .header-subtitle__div {
+    height: 70px;
+    display: flex;
   }
   .header__nav {
     height: 55px;
@@ -58,6 +65,7 @@
 
     button:hover {
       color: #75913d;
+      cursor: pointer;
     }
 
     button:after {
