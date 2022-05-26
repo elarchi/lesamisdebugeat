@@ -3,8 +3,31 @@ import "./whoarewe.scss";
 //Importation des components
 import HeadquarterCard from "../../components/HeadquarterCard/HeadquarterCard";
 import { Link } from "react-router-dom";
+// import { useState } from "react";
+//Importation des composants UI
+import * as React from "react";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import Slide from "@mui/material/Slide";
 
 const WhoAreWe = () => {
+  const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+  });
+
+  const [open, setOpen] = React.useState(false);
+  // const [indexName, setIndexName] = useState();
+  const handleClickOpen = (i) => {
+    // setIndexName(i);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   let members = [
     "AUGRIS Baptiste",
     "AUPRETRE Daniel",
@@ -71,6 +94,7 @@ const WhoAreWe = () => {
     "PEYRUCHAUD Matthieu",
     "POZZO DI BORGO Alexandra",
   ];
+
   return (
     <div className="whoarewe__div container">
       <div className="quote__div">
@@ -130,15 +154,38 @@ const WhoAreWe = () => {
       </div>
       <div className="members__div">
         <h1>Membres</h1>
+
         <div className="membersList__div">
           {" "}
           {members.map((name, index) => {
             return (
-              <span key={index}>
+              <span
+                key={index}
+                // onClick={() => {
+                //   handleClickOpen(index);
+                // }}
+                onClick={handleClickOpen}
+              >
                 {name} <br />
               </span>
             );
           })}
+          <Dialog
+            open={open}
+            TransitionComponent={Transition}
+            keepMounted
+            onClose={handleClose}
+            aria-describedby="alert-dialog-slide-description"
+          >
+            <DialogTitle>{"Nom du contact"}</DialogTitle>
+            <DialogContent>
+              <DialogContentText id="alert-dialog-slide-description">
+                Let Google help apps determine location. This means sending
+                anonymous location data to Google, even when no apps are
+                running.
+              </DialogContentText>
+            </DialogContent>
+          </Dialog>
           <br />
           <Link to="/subscription">
             <button>Nous rejoindre</button>
