@@ -1,4 +1,4 @@
-.contact__div {
+.whoarewe__div {
   font-family: inter;
   margin-bottom: 150px;
 
@@ -33,24 +33,28 @@
   }
   .members__div {
     .membersList__div {
-      font-size: 20px;
+      font-size: 18px;
       column-count: 4;
       line-height: 2;
-    }
 
-    button {
-      background-color: #75913d;
-      color: white;
-      height: 50px;
-      width: 100%;
-      font-size: 20px;
-      border: none;
-    }
-    button:hover {
-      background-color: white;
-      color: #75913d;
-      border: #75913d solid 1px;
-      cursor: pointer;
+      span:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      button {
+        background-color: #75913d;
+        color: white;
+        height: 50px;
+        width: 100%;
+        font-size: 20px;
+        border: none;
+      }
+      button:hover {
+        background-color: white;
+        color: #75913d;
+        border: #75913d solid 1px;
+        cursor: pointer;
+      }
     }
   }
 }

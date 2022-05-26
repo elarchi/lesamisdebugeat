@@ -1,10 +1,10 @@
 //Importation des feuilles de style
-import "./contact.scss";
+import "./whoarewe.scss";
 //Importation des components
 import HeadquarterCard from "../../components/HeadquarterCard/HeadquarterCard";
 import { Link } from "react-router-dom";
 
-const Contact = () => {
+const WhoAreWe = () => {
   let members = [
     "AUGRIS Baptiste",
     "AUPRETRE Daniel",
@@ -72,7 +72,7 @@ const Contact = () => {
     "POZZO DI BORGO Alexandra",
   ];
   return (
-    <div className="contact__div container">
+    <div className="whoarewe__div container">
       <div className="quote__div">
         <hr />
         <p>
@@ -150,4 +150,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default WhoAreWe;

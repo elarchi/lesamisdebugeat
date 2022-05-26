@@ -26,16 +26,17 @@ const Header = () => {
         <h2>Faire connaître et promouvoir le pays de Bugeat</h2>
       </div>
       <nav className="header__nav">
-        <Link to="/home" className="link">
+        <Link to="/" className="link">
           <button className="separator__button">ACCUEIL</button>
         </Link>
-        <button className="separator__button">QUI SOMMES-NOUS ?</button>
+        <Link to="/who-are-we" className="link">
+          <button className="separator__button">QUI SOMMES-NOUS ?</button>
+        </Link>
         <button className="separator__button">NOUS REJOINDRE</button>
         <button className="separator__button">PUBLICATIONS</button>
         <button className="separator__button">ÉVÈNEMENTS</button>
-        <Link to="/contact" className="link">
-          <button>CONTACT</button>
-        </Link>
+
+        <button>CONTACT</button>
       </nav>
     </div>
   );
