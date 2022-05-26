@@ -32,7 +32,9 @@ const Header = () => {
         <Link to="/who-are-we" className="link">
           <button className="separator__button">QUI SOMMES-NOUS ?</button>
         </Link>
-        <button className="separator__button">NOUS REJOINDRE</button>
+        <Link to="/subscription" className="link">
+          <button className="separator__button">NOUS REJOINDRE</button>
+        </Link>
         <button className="separator__button">PUBLICATIONS</button>
         <button className="separator__button">ÉVÈNEMENTS</button>
 

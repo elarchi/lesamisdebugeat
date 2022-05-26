@@ -7,6 +7,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
 import WhoAreWe from "./pages/WhoAreWe/WhoAreWe";
+import Subscription from "./pages/Subscription/Subscription";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/who-are-we" element={<WhoAreWe />} />
+          <Route path="/subscription" element={<Subscription />} />
         </Routes>
         <Footer />
       </Router>

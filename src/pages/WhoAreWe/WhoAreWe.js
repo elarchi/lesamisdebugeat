@@ -76,11 +76,11 @@ const WhoAreWe = () => {
       <div className="quote__div">
         <hr />
         <p>
-          “Les amis du pays du Bugeat est une association qui soutient des
-          projets locaux, organise des évènements culturels sous forme de{" "}
-          <span>conférences</span>, d'<span>expositions</span>, de{" "}
-          <span>soirées contes</span> ou d'<span>éditions de livre</span> sur
-          notre village.”
+          "Les amis du pays du Bugeat est une association qui soutient des{" "}
+          <span>projets locaux</span>, organise des{" "}
+          <span>évènements culturels</span> sous forme de conférences,
+          d'expositions, de soirées contes ou d'éditions de livre sur notre
+          village."
         </p>
         <hr />
       </div>

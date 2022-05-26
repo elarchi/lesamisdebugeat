@@ -9,7 +9,7 @@
 
   .quote__div {
     margin-top: 50px;
-    width: 500px;
+    width: 515px;
     hr {
       border-top: solid 2px black;
     }
@@ -17,11 +17,13 @@
       width: 100%;
       font-size: 16px;
       text-align: justify;
+      line-height: 2;
       span {
         color: #75913d;
       }
     }
   }
+
   .headquarter__div {
     margin-top: 50px;
     margin-bottom: 100px;

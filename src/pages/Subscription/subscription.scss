@@ -1,0 +1,41 @@
+.subscription__div {
+  font-family: inter;
+  margin-bottom: 150px;
+
+  .quote__div {
+    margin-top: 50px;
+    width: 515px;
+    hr {
+      border-top: solid 2px black;
+    }
+    p {
+      width: 100%;
+      font-size: 16px;
+      text-align: justify;
+      line-height: 2;
+      span {
+        color: #75913d;
+      }
+    }
+  }
+
+  .rules__div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 2;
+    .link {
+      text-decoration: none;
+    }
+    .link:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+}
