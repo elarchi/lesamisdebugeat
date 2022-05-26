@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 //Importation des feuilles de style
 import "./home.scss";
 //Importation des components
-import Last from "../../components/Last/Last";
+import LastItem from "../../components/LastItem/LastItem";
 
 const Home = () => {
   // Pour modifier un évènement, l'URL de son image, son titre, son texte : c'est ici.
@@ -95,13 +95,13 @@ const Home = () => {
         </SwiperSlide>
       </Swiper>
 
-      <Last
+      <LastItem
         title="Derniers évènements"
         items={events}
         span="Voir plus d'évènements"
       />
 
-      <Last
+      <LastItem
         title="Dernières publications"
         items={publications}
         span="Voir plus de publications"

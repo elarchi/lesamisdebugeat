@@ -1,0 +1,29 @@
+.contact__div {
+  font-family: inter;
+  margin-bottom: 150px;
+  .quote__div {
+    margin-top: 50px;
+    width: 500px;
+    hr {
+      border-top: solid 2px black;
+    }
+    p {
+      width: 100%;
+      font-size: 18px;
+      text-align: justify;
+      span {
+        color: #75913d;
+      }
+    }
+  }
+  .headquarter__div {
+    margin-top: 50px;
+    h1 {
+      font-weight: 500;
+    }
+    .cards__div {
+      display: flex;
+      gap: 30px;
+    }
+  }
+}

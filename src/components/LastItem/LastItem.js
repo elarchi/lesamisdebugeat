@@ -1,7 +1,7 @@
 //Importation des feuilles de style
-import "./last.scss";
+import "./lastitem.scss";
 
-const Last = ({ title, items, span }) => {
+const LastItem = ({ title, items, span }) => {
   return (
     <div className="last__div container">
       <h1>{title}</h1>
@@ -45,4 +45,4 @@ const Last = ({ title, items, span }) => {
   );
 };
 
-export default Last;
+export default LastItem;

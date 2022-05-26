@@ -1,6 +1,7 @@
 //Importations des feuilles de style
 import "./header.scss";
-
+//Importation des composants react
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header__div container">
@@ -25,12 +26,16 @@ const Header = () => {
         <h2>Faire connaître et promouvoir le pays de Bugeat</h2>
       </div>
       <nav className="header__nav">
-        <button className="separator__button">ACCUEIL</button>
+        <Link to="/home" className="link">
+          <button className="separator__button">ACCUEIL</button>
+        </Link>
         <button className="separator__button">QUI SOMMES-NOUS ?</button>
         <button className="separator__button">NOUS REJOINDRE</button>
         <button className="separator__button">PUBLICATIONS</button>
         <button className="separator__button">ÉVÈNEMENTS</button>
-        <button>CONTACT</button>
+        <Link to="/contact" className="link">
+          <button>CONTACT</button>
+        </Link>
       </nav>
     </div>
   );
