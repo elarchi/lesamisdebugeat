@@ -1,6 +1,12 @@
 .contact__div {
   font-family: inter;
   margin-bottom: 150px;
+
+  h1 {
+    font-weight: 500;
+    font-size: 38px;
+  }
+
   .quote__div {
     margin-top: 50px;
     width: 500px;
@@ -9,7 +15,7 @@
     }
     p {
       width: 100%;
-      font-size: 18px;
+      font-size: 16px;
       text-align: justify;
       span {
         color: #75913d;
@@ -18,12 +24,33 @@
   }
   .headquarter__div {
     margin-top: 50px;
-    h1 {
-      font-weight: 500;
-    }
+    margin-bottom: 100px;
+
     .cards__div {
       display: flex;
       gap: 30px;
+    }
+  }
+  .members__div {
+    .membersList__div {
+      font-size: 20px;
+      column-count: 4;
+      line-height: 2;
+    }
+
+    button {
+      background-color: #75913d;
+      color: white;
+      height: 50px;
+      width: 100%;
+      font-size: 20px;
+      border: none;
+    }
+    button:hover {
+      background-color: white;
+      color: #75913d;
+      border: #75913d solid 1px;
+      cursor: pointer;
     }
   }
 }

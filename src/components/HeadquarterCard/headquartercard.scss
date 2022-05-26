@@ -10,11 +10,16 @@
     height: 400px;
     object-fit: cover;
   }
-  h1 {
-    font-size: 20px;
-  }
   h2 {
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 14px;
     font-weight: 600;
+    text-decoration: underline;
+  }
+  p {
+    font-size: 14px;
   }
 }

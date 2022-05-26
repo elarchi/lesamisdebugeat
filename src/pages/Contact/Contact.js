@@ -1,8 +1,76 @@
 //Importation des feuilles de style
-import HeadquarterCard from "../../components/HeadquarterCard/HeadquarterCard";
 import "./contact.scss";
+//Importation des components
+import HeadquarterCard from "../../components/HeadquarterCard/HeadquarterCard";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
+  let members = [
+    "AUGRIS Baptiste",
+    "AUPRETRE Daniel",
+    " BEAUFORT Arnaud",
+    "BERGAL-BUFFERINI Laurence",
+    "BESSETTE Jean",
+    "BLANC Danielle",
+    "BORZEIX Jean-Marie",
+    "BOURRE Jean-Marie",
+    " BOURRE Marie-Laure",
+    "BRUNOT Clarisse",
+    "CASSANAS Didier",
+    "CHAMPEAUX Jean-Louis",
+    "CHASTAGNOL Claude",
+    "CHAZALMARTIN Pierre-Marie",
+    "COUDERT Régis",
+    "EURL HEIJBOER (coiffure)",
+    "FADDA Anne-Marie",
+    "FAUCHER Jean-Pierre",
+    "FOURNET Pierre",
+    "FIANDRIN Bruno",
+    "GANDOIS Josiane",
+    "GANDOIS Pierre",
+    "GARNIER Philippe",
+    "GAYREAU Daniele",
+    "GAYREAU  Noël",
+    "GAZEAU Patrick",
+    "GIBRAT Brigitte",
+    "GODET-CHENEVAL Chantal",
+    "GUILLAUME Jean-Claude",
+    "HOARAU Henri",
+    "JAMILLOUX Bernard",
+    "LACHAUD Suzanne",
+    "LAGARDE Jean-Marie",
+    "LASSIAILLE Roger",
+    "LAVAL Patrick",
+    "LAVAL Annie",
+    "LESUEUR Marielle",
+    "LOUVRIERE-GONZALEZ Chantal",
+    "GONZALEZ-ALONSO Alain",
+    "MOURIERAS Jean-Pierre",
+    "MUHLENS Monique",
+    "NONY Antoine",
+    "NONY Caroline",
+    "NONY Gérard",
+    "NONY	Jean-Christophe",
+    "NONY	Paul",
+    "ORLIANGES  Yves",
+    "PANKER Georges",
+    "PAULY Bernard",
+    "PAUTY Pierre",
+    "PEREL Alain",
+    "PEREL Clémence",
+    "PEREL Yves",
+    "PETER Dominique",
+    "PETIT Christophe",
+    "PEYRAT Bernadette",
+    "PEYRAT François",
+    "PEYRUCHAUD Sylvie",
+    "PEYRUCHAUT Danielle",
+    "PEYRUCHAUD  Jean-Louis",
+    "PEYRUCHAUD Julien",
+    "PEYRUCHAUD Marie",
+    "PEYRUCHAUD Matthieu",
+    "POZZO DI BORGO Alexandra",
+  ];
   return (
     <div className="contact__div container">
       <div className="quote__div">
@@ -59,6 +127,24 @@ const Contact = () => {
             }
           />
         </div>
+      </div>
+      <div className="members__div">
+        <h1>Membres</h1>
+        <div className="membersList__div">
+          {" "}
+          {members.map((name, index) => {
+            return (
+              <span key={index}>
+                {name} <br />
+              </span>
+            );
+          })}
+          <br />
+          <Link to="/subscription">
+            <button>Nous rejoindre</button>
+          </Link>
+        </div>
+        {/* <div className="button__div"></div> */}
       </div>
     </div>
   );
