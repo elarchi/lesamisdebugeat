@@ -41,10 +41,10 @@ const Home = () => {
       url: "https://res.cloudinary.com/dn7zdnm89/image/upload/v1653562048/lesAmisDuPaysDeBugeat/affiche-festival_yugxq2.png",
     },
     middle: {
-      title: "Atelier peinture",
+      title: "Portrait de J-P Mabille",
       date: "Publié le : 17-10-2022",
-      text: "Ce mercredi l'association des Amis du Pays de Bugeat vous propose de vous mettre à la peinture, de quoi mettre de la couleur dans votre quotidien. L'inscription se fait via le lien de l'évènement.",
-      url: "https://res.cloudinary.com/dn7zdnm89/image/upload/v1653503433/lesAmisDuPaysDeBugeat/L1000383_omdo8o.png",
+      text: "Ce mercredi l'association des Amis du Pays de Bugeat a interviwé le photographe Jean-Pierre Mabille pour découvrir son travail. Il y parle de ses débuts et partage quelques conseils pour celles et ceux qui aimeraient se lancer dans la photo.",
+      url: "https://res.cloudinary.com/dn7zdnm89/image/upload/v1653503459/lesAmisDuPaysDeBugeat/L1000389_eegkuy.png",
     },
     right: {
       title: "Election du nouveau bureau",
