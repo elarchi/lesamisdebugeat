@@ -1,10 +1,18 @@
 .footer__div {
-  border-top: black solid 2px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  height: 120px;
+  height: 150px;
+  background-color: white;
+  width: 100%;
+
+  position: fixed;
+  bottom: 0;
+
+  hr {
+    border-top: 2px solid black;
+  }
 
   img {
     height: 50px;
