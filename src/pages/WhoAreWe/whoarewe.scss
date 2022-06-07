@@ -30,7 +30,9 @@
 
     .cards__div {
       display: flex;
-      gap: 30px;
+      gap: 20px;
+      height: 1200px;
+      flex-wrap: wrap;
     }
   }
   .members__div {

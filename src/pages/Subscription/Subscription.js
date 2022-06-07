@@ -120,9 +120,6 @@ const Subscription = () => {
           Connaître les status de l'association
         </Link>
         <Link to="/" className="link">
-          Lire le règlement
-        </Link>
-        <Link to="/" className="link">
           Télécharger le bulletin d'adhésion papier
         </Link>
       </div>
