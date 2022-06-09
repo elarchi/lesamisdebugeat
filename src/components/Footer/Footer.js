@@ -6,12 +6,11 @@ const Footer = () => {
     <div className="footer__div ">
       <hr className="container" />
       <br />
-      <img
-        src="https://res.cloudinary.com/dn7zdnm89/image/upload/v1652461008/lesAmisDuPaysDeBugeat/logo_bnfdvs.png"
-        alt="logo-association"
-      />
-
-      <p>Website créé par Emilie Leury, 2022</p>
+      <p> © Website créé par Emilie Leury, 2022</p>
+      <span>Accueil</span>
+      <span>Écrivez-nous</span>
+      <span>Devenir membre de l'association</span>
+      <span></span>
     </div>
   );
 };

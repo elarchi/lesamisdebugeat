@@ -6,6 +6,10 @@ const Header = () => {
   return (
     <div className="header__div container">
       <div className="header-title__div">
+        <img
+          src="https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654802361/header/logo_vwogsf.png"
+          alt="logo-association"
+        />
         <h1>Les amis du pays de Bugeat</h1>
         <div className="header-logos__div">
           <img

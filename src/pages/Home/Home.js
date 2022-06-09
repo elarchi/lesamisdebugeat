@@ -96,6 +96,12 @@ const Home = () => {
       </Swiper>
 
       <LastItem
+        title="Évènements à venir"
+        items={events}
+        span="Voir plus d'évènements"
+      />
+
+      <LastItem
         title="Derniers évènements"
         items={events}
         span="Voir plus d'évènements"
