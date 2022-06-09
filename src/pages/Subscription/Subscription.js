@@ -69,7 +69,7 @@ const Subscription = () => {
           </div>
         </div>
         <button>J'adhère à l'association</button>
-        <span>{errorMessage}</span>
+        {/* <span>{errorMessage}</span> */}
       </form>
     </div>
   );
