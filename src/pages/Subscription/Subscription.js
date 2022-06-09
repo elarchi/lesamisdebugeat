@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Subscription = () => {
-  const [errorMessage, setErrorMessage] = useState("");
+  // const [errorMessage, setErrorMessage] = useState("");
   //"Ce membre est déjà inscrit"
   //"Merci d'entrer votre prénom, nom et adresse email"
   //"Merci d'accepter le règlement"
