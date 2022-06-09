@@ -208,7 +208,7 @@ const WhoAreWe = () => {
           </Dialog>
           <br />
           <Link to="/subscription">
-            <button>Nous rejoindre</button>
+            <button>Devenir membre</button>
           </Link>
         </div>
         {/* <div className="button__div"></div> */}

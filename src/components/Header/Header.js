@@ -31,16 +31,17 @@ const Header = () => {
       </div>
       <nav className="header__nav">
         <Link to="/" className="link">
-          <button className="separator__button">ACCUEIL</button>
+          <button>ACCUEIL</button>
         </Link>
         <Link to="/who-are-we" className="link">
-          <button className="separator__button">QUI SOMMES-NOUS ?</button>
+          <button>QUI SOMMES-NOUS ?</button>
         </Link>
+        <button>ÉVÈNEMENTS</button>
+
+        <button>PUBLICATIONS</button>
         <Link to="/subscription" className="link">
-          <button className="separator__button">NOUS REJOINDRE</button>
+          <button>DEVENIR MEMBRE</button>
         </Link>
-        <button className="separator__button">PUBLICATIONS</button>
-        <button className="separator__button">ÉVÈNEMENTS</button>
 
         <button>CONTACT</button>
       </nav>

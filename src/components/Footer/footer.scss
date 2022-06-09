@@ -3,12 +3,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  height: 150px;
   background-color: white;
-  width: 100%;
-
-  position: fixed;
-  bottom: 0;
 
   hr {
     border-top: 2px solid black;
@@ -21,5 +16,18 @@
 
   p {
     font-size: 12px;
+  }
+
+  nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 10px;
+
+    span:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
   }
 }

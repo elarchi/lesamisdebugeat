@@ -2,105 +2,13 @@
 import "./subscription.scss";
 //Importation des composants react
 import { Link } from "react-router-dom";
-//Importation des composants UI
-import * as React from "react";
-import PropTypes from "prop-types";
-import Box from "@mui/material/Box";
-import InputUnstyled, { inputUnstyledClasses } from "@mui/base/InputUnstyled";
-import { styled } from "@mui/system";
+import { useState } from "react";
 
 const Subscription = () => {
-  const blue = {
-    100: "#DAECFF",
-    200: "#80BFFF",
-    400: "#3399FF",
-    600: "#0072E5",
-  };
-
-  const grey = {
-    50: "#F3F6F9",
-    100: "#E7EBF0",
-    200: "#E0E3E7",
-    300: "#CDD2D7",
-    400: "#B2BAC2",
-    500: "#A0AAB4",
-    600: "#6F7E8C",
-    700: "#3E5060",
-    800: "#2D3843",
-    900: "#1A2027",
-  };
-
-  const StyledInputRoot = styled("div")(
-    ({ theme }) => `
-        font-family: IBM Plex Sans, sans-serif;
-        display: flex;
-        font-weight: 500;
-        border: 1px solid ${
-          theme.palette.mode === "dark" ? grey[800] : grey[300]
-        };
-        border-radius: 8px;
-        background: ${theme.palette.mode === "dark" ? grey[900] : grey[50]};
-        align-items: center;
-        justify-content: center;
-      
-        &.${inputUnstyledClasses.focused} {
-          outline: 3px solid ${
-            theme.palette.mode === "dark" ? blue[600] : blue[100]
-          };
-        }
-      
-        &:hover {
-          background: ${theme.palette.mode === "dark" ? "" : grey[100]};
-          border-color: ${
-            theme.palette.mode === "dark" ? grey[700] : grey[400]
-          };
-        }
-      `
-  );
-
-  const StyledInputElement = styled("input")(
-    ({ theme }) => `
-        font-size: 0.875rem;
-        font-family: inherit;
-        font-weight: 400;
-        line-height: 1.5;
-        flex-grow: 1;
-        color: ${theme.palette.mode === "dark" ? grey[300] : grey[900]};
-        background: inherit;
-        border: none;
-        border-radius: inherit;
-        padding: 12px 12px;
-        outline: 0;
-      `
-  );
-
-  const CustomInput = React.forwardRef(function CustomInput(props, ref) {
-    const { components, ...other } = props;
-    return (
-      <InputUnstyled
-        components={{
-          Root: StyledInputRoot,
-          Input: StyledInputElement,
-          ...components,
-        }}
-        {...other}
-        ref={ref}
-      />
-    );
-  });
-
-  CustomInput.propTypes = {
-    /**
-     * The components used for each slot inside the InputBase.
-     * Either a string to use a HTML element or a component.
-     * @default {}
-     */
-    components: PropTypes.shape({
-      Input: PropTypes.elementType,
-      Root: PropTypes.elementType,
-      Textarea: PropTypes.elementType,
-    }),
-  };
+  const [errorMessage, setErrorMessage] = useState("");
+  //"Ce membre est déjà inscrit"
+  //"Merci d'entrer votre prénom, nom et adresse email"
+  //"Merci d'accepter le règlement"
 
   return (
     <div className="subscription__div container">
@@ -124,21 +32,44 @@ const Subscription = () => {
         </Link>
       </div>
       <form action="" className="form">
-        <Box sx={{ display: "flex", "& > * + *": { ml: 1 } }}>
-          <CustomInput id="outlined-start-adornment" />
-        </Box>
-
-        <Box sx={{ display: "flex", "& > * + *": { ml: 1 } }}>
-          <CustomInput id="outlined-start-adornment" />
-        </Box>
-
-        <Box sx={{ display: "flex", "& > * + *": { ml: 1 } }}>
-          <CustomInput id="outlined-start-adornment" />
-        </Box>
-
-        <Box sx={{ display: "flex", "& > * + *": { ml: 1 } }}>
-          <CustomInput id="outlined-start-adornment" />
-        </Box>
+        <div className="col__div">
+          <div className="txt">Prénom</div>
+          <input type="text" />
+        </div>
+        <div className="col__div">
+          <div className="txt">Nom de famille</div>
+          <input type="text" />
+        </div>
+        <div className="col__div">
+          <div className="txt">Email</div>
+          <input type="text" />
+        </div>
+        <div className="row__div">
+          <div className="txt">
+            {" "}
+            Photo d'identité <span>(facultatif)</span> :
+          </div>
+          <button className="updload__button">
+            Sélectionnez une photo depuis votre ordinateur
+          </button>
+        </div>
+        <div className="row__div">
+          <input type="checkbox" />
+          <div className="txt">
+            Je confirme avoir lu et accepté le règlement de l'association Les
+            Amis du Pays de Bugeat.
+          </div>
+        </div>
+        <div className="row__div">
+          <input type="checkbox" />
+          <div className="txt">
+            J'autorise l'association Les Amis du Pays de Bugeat à reproduire et
+            exploiter mon image ﬁxée dans le cadre de photographies lors des
+            différents évènements.
+          </div>
+        </div>
+        <button>J'adhère à l'association</button>
+        <span>{errorMessage}</span>
       </form>
     </div>
   );
