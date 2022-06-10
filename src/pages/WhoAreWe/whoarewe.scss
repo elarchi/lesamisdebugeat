@@ -27,12 +27,26 @@
   .headquarter__div {
     margin-top: 50px;
     margin-bottom: 100px;
+    position: relative;
+    border: red solid 3px;
 
     .cards__div {
       display: flex;
-      gap: 20px;
-      height: 1200px;
-      flex-wrap: wrap;
+      gap: 5px;
+      height: 600px;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      overflow-x: scroll;
+    }
+
+    i {
+      height: 50px;
+    }
+
+    .icon {
+      color: rgb(200, 198, 198);
+      opacity: 50%;
+      font-size: 60px;
     }
   }
   .members__div {

@@ -7,8 +7,8 @@ const HeadquarterCard = ({ title, name, telephone, email, urlImage }) => {
       <img src={urlImage} alt="membre-du-bureau" />
       <h3>{title} :</h3>
       <h2>{name}</h2>
-      <p>Tél : {telephone}</p>
-      <p>Email : {email}</p>
+      <p>📞 : {telephone}</p>
+      <p>✉️ : {email}</p>
     </div>
   );
 };

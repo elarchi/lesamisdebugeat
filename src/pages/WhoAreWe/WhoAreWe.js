@@ -11,6 +11,11 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 const WhoAreWe = () => {
   const Transition = React.forwardRef(function Transition(props, ref) {
@@ -110,37 +115,8 @@ const WhoAreWe = () => {
       </div>
       <div className="headquarter__div">
         <h1>Notre bureau</h1>
+        <FontAwesomeIcon icon={faChevronLeft} className="fa-thin icon" />
         <div className="cards__div ">
-          <HeadquarterCard
-            title={"Présidente"}
-            name={"Sophie Van Roekeghem"}
-            telephone={"06-80-47-21-90"}
-            email={"svanroek@gmail.com"}
-            urlImage={
-              "https://res.cloudinary.com/dn7zdnm89/image/upload/v1653574651/lesAmisDuPaysDeBugeat/Sophie_identite%CC%81_dagbz3.png"
-            }
-          />
-
-          <HeadquarterCard
-            title={"Vice - président"}
-            name={"Yves Pérel"}
-            telephone={"06-79-97-83-12"}
-            email={"perel.yves@wanadoo.fr"}
-            urlImage={
-              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654622510/qui-sommes-nous/bureau/yves-perel_vice-president_1_znlnjj.jpg"
-            }
-          />
-
-          <HeadquarterCard
-            title={"Trésorier"}
-            name={"Jean-Christophe Nony"}
-            telephone={"06-72-07-92-92"}
-            email={"jc.nony@orange.fr"}
-            urlImage={
-              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654622744/qui-sommes-nous/bureau/jean-christophe-nony_tresorier_vb3khn.jpg"
-            }
-          />
-
           <HeadquarterCard
             title={"Vice-trésorier"}
             name={"Bernard Jamilloux"}
@@ -162,6 +138,16 @@ const WhoAreWe = () => {
           />
 
           <HeadquarterCard
+            title={"Trésorier"}
+            name={"Jean-Christophe Nony"}
+            telephone={"06-72-07-92-92"}
+            email={"jc.nony@orange.fr"}
+            urlImage={
+              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654622744/qui-sommes-nous/bureau/jean-christophe-nony_tresorier_vb3khn.jpg"
+            }
+          />
+
+          <HeadquarterCard
             title={"Ingénieur Son & Lumière"}
             name={"Patrick Gazeau"}
             telephone={"00-00-00-00-00"}
@@ -170,7 +156,28 @@ const WhoAreWe = () => {
               "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654618477/sample.jpg"
             }
           />
+
+          <HeadquarterCard
+            title={"Présidente"}
+            name={"Sophie Van Roekeghem"}
+            telephone={"06-80-47-21-90"}
+            email={"svanroek@gmail.com"}
+            urlImage={
+              "https://res.cloudinary.com/dn7zdnm89/image/upload/v1653574651/lesAmisDuPaysDeBugeat/Sophie_identite%CC%81_dagbz3.png"
+            }
+          />
+
+          <HeadquarterCard
+            title={"Vice - président"}
+            name={"Yves Pérel"}
+            telephone={"06-79-97-83-12"}
+            email={"perel.yves@wanadoo.fr"}
+            urlImage={
+              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654622510/qui-sommes-nous/bureau/yves-perel_vice-president_1_znlnjj.jpg"
+            }
+          />
         </div>
+        <FontAwesomeIcon icon={faChevronRight} className="fa-thin icon" />
       </div>
       <div className="members__div">
         <h1>Nos membres</h1>
