@@ -43,7 +43,10 @@ const Header = () => {
           <button>DEVENIR MEMBRE</button>
         </Link>
 
-        <button>CONTACT</button>
+        <Link to="/contact" className="link">
+          {" "}
+          <button>CONTACT</button>
+        </Link>
       </nav>
     </div>
   );
