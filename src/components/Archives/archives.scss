@@ -1,0 +1,25 @@
+.archive__div {
+  h1 {
+    font-weight: 500;
+  }
+  .list-of-content__div {
+    display: flex;
+    flex-direction: column;
+    .cardContent__div {
+      display: flex;
+      justify-content: space-between;
+      h2 {
+        font-weight: 300;
+        font-size: 18px;
+      }
+    }
+    .cardContent__div:hover {
+      border-bottom: solid red 1px;
+      cursor: pointer;
+      h2 {
+        font-size: 26px;
+        color: red;
+      }
+    }
+  }
+}

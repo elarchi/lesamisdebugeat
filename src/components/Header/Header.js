@@ -43,8 +43,10 @@ const Header = () => {
           {" "}
           <button>ÉVÈNEMENTS</button>
         </Link>
-
-        <button>PUBLICATIONS</button>
+        <Link to="/publications" className="link">
+          {" "}
+          <button>PUBLICATIONS</button>
+        </Link>
         <Link to="/subscription" className="link">
           <button>DEVENIR MEMBRE</button>
         </Link>
