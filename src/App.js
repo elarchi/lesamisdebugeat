@@ -9,6 +9,8 @@ import Home from "./pages/Home/Home";
 import WhoAreWe from "./pages/WhoAreWe/WhoAreWe";
 import Subscription from "./pages/Subscription/Subscription";
 import Contact from "./pages/Contact/Contact";
+import Events from "./pages/Events/Events";
+import Publications from "./pages/Publications/Publications";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/who-are-we" element={<WhoAreWe />} />
           <Route path="/subscription" element={<Subscription />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/publications" element={<Publications />} />
         </Routes>
         <Footer />
       </Router>

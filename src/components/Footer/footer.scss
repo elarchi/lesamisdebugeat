@@ -4,8 +4,9 @@
   flex-direction: column;
   justify-content: center;
   background-color: white;
+  font-family: "inter";
   hr {
-    border-top: 2px solid black;
+    border-top: 1px solid black;
   }
 
   img {
@@ -28,5 +29,14 @@
       cursor: pointer;
       text-decoration: underline;
     }
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    text-decoration: underline;
+    cursor: pointer;
   }
 }

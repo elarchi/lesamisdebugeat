@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import "./home.scss";
 //Importation des components
 import LastItem from "../../components/LastItem/LastItem";
+import Caroussel from "../../components/Caroussel/Caroussel";
 
 const Home = () => {
   // Pour modifier un évènement, l'URL de son image, son titre, son texte : c'est ici.
@@ -63,37 +64,7 @@ const Home = () => {
 
       {/* Pour supprimer une image du carousel, sélectionner le composant où se trouve l'URL de l'image et supprimez le. */}
 
-      <Swiper
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Autoplay, Pagination]}
-        loop={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <img
-            src="https://res.cloudinary.com/dn7zdnm89/image/upload/v1653503446/lesAmisDuPaysDeBugeat/_1033073_dt9ive.png"
-            alt=""
-          />
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <img
-            src="https://res.cloudinary.com/dn7zdnm89/image/upload/v1653503472/lesAmisDuPaysDeBugeat/_1033043_kyy27c.png"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://res.cloudinary.com/dn7zdnm89/image/upload/v1653503461/lesAmisDuPaysDeBugeat/_1011838_qs1rih.png"
-            alt=""
-          />
-        </SwiperSlide>
-      </Swiper>
+      <Caroussel />
 
       <LastItem
         title="Évènements à venir"

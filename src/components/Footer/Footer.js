@@ -21,10 +21,16 @@ const Footer = () => {
         <Link to="/subscription">
           <span>Devenir membre de l'association</span>
         </Link>
-
-        <span>Contact</span>
+        <Link to="/contact">
+          {" "}
+          <span>Contact</span>
+        </Link>
       </nav>
-      <p> © Website créé par Emilie Leury, 2022</p>
+      <p>
+        {" "}
+        © 2022, designed and developed by{" "}
+        <a href="mailto:emilie.leury@gmail.com">Emilie Leury</a>
+      </p>
     </div>
   );
 };
