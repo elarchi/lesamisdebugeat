@@ -1,9 +1,3 @@
-//Importation des React Components (UI)
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper";
-// Importation Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
 //Importation des feuilles de style
 import "./home.scss";
 //Importation des components
