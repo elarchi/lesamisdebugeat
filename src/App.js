@@ -11,6 +11,7 @@ import Subscription from "./pages/Subscription/Subscription";
 import Contact from "./pages/Contact/Contact";
 import Events from "./pages/Events/Events";
 import Publications from "./pages/Publications/Publications";
+import Status from "./pages/Status/Status";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/events" element={<Events />} />
           <Route path="/publications" element={<Publications />} />
+          <Route path="/who-are-we/status" element={<Status />} />
         </Routes>
         <Footer />
       </Router>

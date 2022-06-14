@@ -118,7 +118,7 @@ const WhoAreWe = () => {
         <FontAwesomeIcon icon={faChevronLeft} className="fa-thin icon" />
         <div className="cards__div ">
           <HeadquarterCard
-            title={"Vice-trésorier"}
+            title={"Trésorier adjoint"}
             name={"Bernard Jamilloux"}
             telephone={"00-00-00-00-00"}
             email={"xxxx@mail.fr"}
@@ -138,12 +138,52 @@ const WhoAreWe = () => {
           />
 
           <HeadquarterCard
-            title={"Trésorier"}
+            title={"Secrétaire adjoint"}
+            name={"Jacques Saderne"}
+            telephone={"00000000"}
+            email={"mail@mail.fr"}
+            urlImage={
+              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654618477/sample.jpg"
+            }
+          />
+
+          <HeadquarterCard
+            title={"Trésorier & Resp. informatique"}
             name={"Jean-Christophe Nony"}
             telephone={"06-72-07-92-92"}
             email={"jc.nony@orange.fr"}
             urlImage={
               "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654622744/qui-sommes-nous/bureau/jean-christophe-nony_tresorier_vb3khn.jpg"
+            }
+          />
+
+          <HeadquarterCard
+            title={"Président d'honneur"}
+            name={"Jean-Marie Borzeix"}
+            telephone={"00-00-00-00-00"}
+            email={"xxx@mail.fr"}
+            urlImage={
+              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654618477/sample.jpg"
+            }
+          />
+
+          <HeadquarterCard
+            title={"Président d'honneur"}
+            name={"Jean-Marie Bourre"}
+            telephone={"00-00-00-00-00"}
+            email={"xxx@mail.fr"}
+            urlImage={
+              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654618477/sample.jpg"
+            }
+          />
+
+          <HeadquarterCard
+            title={"Secrétaire adjoint"}
+            name={"Jean-Pierre Mourieras"}
+            telephone={"00000000"}
+            email={"mail@mail.fr"}
+            urlImage={
+              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654618477/sample.jpg"
             }
           />
 
@@ -168,7 +208,7 @@ const WhoAreWe = () => {
           />
 
           <HeadquarterCard
-            title={"Vice - président"}
+            title={"Vice-Président"}
             name={"Yves Pérel"}
             telephone={"06-79-97-83-12"}
             email={"perel.yves@wanadoo.fr"}

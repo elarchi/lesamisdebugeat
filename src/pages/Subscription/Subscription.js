@@ -24,12 +24,16 @@ const Subscription = () => {
         <hr />
       </div>
       <div className="rules__div">
-        <Link to="/" className="link">
+        <Link to="/who-are-we/status" className="link">
           Connaître les status de l'association
         </Link>
-        <Link to="/" className="link">
+        <a
+          href="src/assets/bulletin-dadhesion.pdf"
+          className="link"
+          download="lesamisdupaysdebugeat-formulaire-d-adhesion"
+        >
           Télécharger le bulletin d'adhésion papier
-        </Link>
+        </a>
       </div>
       <form action="" className="form">
         <div className="col__div">

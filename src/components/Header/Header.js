@@ -16,13 +16,17 @@ const Header = () => {
         <h1>Les amis du pays de Bugeat</h1>
         <div className="header-logos__div">
           <img
+            className="in-construction__img"
             src="https://res.cloudinary.com/dn7zdnm89/image/upload/v1653493909/lesAmisDuPaysDeBugeat/facebook_wbxkzo.png"
             alt="facebook-logo"
           />
-          <img
-            src="https://res.cloudinary.com/dn7zdnm89/image/upload/v1653493317/lesAmisDuPaysDeBugeat/instagram_xb6kue.png"
-            alt="instagram-logo"
-          />
+
+          <a href="https://www.instagram.com/lesamisdupaysdebugeat/">
+            <img
+              src="https://res.cloudinary.com/dn7zdnm89/image/upload/v1653493317/lesAmisDuPaysDeBugeat/instagram_xb6kue.png"
+              alt="instagram-logo"
+            />
+          </a>
           <img
             src="https://res.cloudinary.com/dn7zdnm89/image/upload/v1653493317/lesAmisDuPaysDeBugeat/youtube_boivug.png"
             alt="youtube-logo"
