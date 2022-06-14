@@ -121,7 +121,7 @@ const WhoAreWe = () => {
             title={"Trésorier adjoint"}
             name={"Bernard Jamilloux"}
             telephone={"00-00-00-00-00"}
-            email={"xxxx@mail.fr"}
+            email={" jamillouxb@gmail.com"}
             urlImage={
               "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654622510/qui-sommes-nous/bureau/bernard-jamilloux_tresorier-adjoint_fqbcne.jpg"
             }
@@ -190,8 +190,8 @@ const WhoAreWe = () => {
           <HeadquarterCard
             title={"Ingénieur Son & Lumière"}
             name={"Patrick Gazeau"}
-            telephone={"00-00-00-00-00"}
-            email={"xxx@mail.fr"}
+            telephone={"06-76-96-17-46"}
+            email={"pgazeau33@gmail.com"}
             urlImage={
               "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654618477/sample.jpg"
             }

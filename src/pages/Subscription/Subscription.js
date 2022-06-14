@@ -28,7 +28,7 @@ const Subscription = () => {
           Connaître les status de l'association
         </Link>
         <a
-          href="src/assets/bulletin-dadhesion.pdf"
+          href="https://drive.google.com/file/d/1B4FyeaTX0pGysprIM_M3g0D_CxITgiOw/view?usp=sharing"
           className="link"
           download="lesamisdupaysdebugeat-formulaire-d-adhesion"
         >

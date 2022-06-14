@@ -21,7 +21,7 @@ const Contact = () => {
           <h1>☎️ Téléphone</h1>
           <p>+33 (0)7 82 90 48 82</p>
         </div>
-        <h2>Psssit ! Merci de nous laisser vos coordonnées :)</h2>
+        <h2>Pssst ! Merci de nous laisser vos coordonnées :)</h2>
       </div>
     </div>
   );
