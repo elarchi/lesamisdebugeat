@@ -1,17 +1,11 @@
 .footer__div {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: column;
-  justify-content: center;
   background-color: white;
   font-family: "inter";
   hr {
     border-top: 1px solid black;
-  }
-
-  img {
-    height: 50px;
-    width: 180px;
   }
 
   p {
@@ -21,9 +15,10 @@
   nav {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-end;
     font-size: 12px;
     margin-bottom: 10px;
+    gap: 10px;
 
     span:hover {
       cursor: pointer;

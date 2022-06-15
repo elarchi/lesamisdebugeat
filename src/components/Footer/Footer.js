@@ -9,25 +9,14 @@ const Footer = () => {
       <hr className="container" />
       <br />
       <nav className="">
-        <Link to="/">
-          <span>Accueil</span>
-        </Link>
-        <Link to="/who-are-we">
-          {" "}
-          <span>Qui sommes-nous ?</span>
-        </Link>
-        <span>Évènements</span>
-        <span>Publications</span>
-        <Link to="/subscription">
-          <span>Devenir membre de l'association</span>
-        </Link>
-        <Link to="/contact">
-          {" "}
-          <span>Contact</span>
-        </Link>
+        <Link to="/">Accueil </Link> |{" "}
+        <Link to="/who-are-we">Qui sommes-nous ?</Link> |{" "}
+        <Link to="/subscription">Devenir membre</Link> |{" "}
+        <Link to="/events">Évènements</Link> |{" "}
+        <Link to="/publications">Publications</Link> | Archives |{" "}
+        <Link to="/contact">Contact</Link>
       </nav>
       <p>
-        {" "}
         © 2022, designed and developed by{" "}
         <a href="mailto:emilie.leury@gmail.com">Emilie Leury</a>
       </p>
