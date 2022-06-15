@@ -13,17 +13,22 @@ const Subscription = () => {
   return (
     <div className="subscription__div container">
       <div className="quote__div">
-        <hr />
         <p>
-          “L’adhésion est de <span>10 euros</span>. Il est d’usage j’ajouter une
-          somme, à l’appréciation de chacun (90 euros est l’usage) qui sera
-          déductible de vos impôts à 66% (un justificatif vous sera envoyé).
+          <span className="big-quote__span">« </span>L’adhésion est de{" "}
+          <span>10 euros</span>.<br /> Il est d’usage j’ajouter une somme, à
+          l’appréciation de chacun (90 euros est l’usage) qui sera déductible de
+          vos impôts à 66% (un justificatif vous sera envoyé). <br />
           Cette somme servira à financer ou aider les projets retenus lors de
-          l’AG qui se déroule en principe en août.”
+          l’AG qui se déroule en principe en août.{" "}
+          <span className="big-quote__span">» </span>
         </p>
-        <hr />
       </div>
-      <div className="rules__div">
+      <div className="options__div">
+        <button className="green__button">Adhésion en ligne</button>
+        <span>OU</span>
+        <button className="red__button">Formulaire d'inscription papier</button>
+      </div>
+      {/* <div className="rules__div">
         <Link to="/who-are-we/status" className="link">
           Connaître les status de l'association
         </Link>
@@ -34,8 +39,8 @@ const Subscription = () => {
         >
           Télécharger le bulletin d'adhésion papier
         </a>
-      </div>
-      <form action="" className="form">
+      </div> */}
+      {/* <form action="" className="form">
         <div className="col__div">
           <div className="txt">Prénom</div>
           <input type="text" />
@@ -73,8 +78,8 @@ const Subscription = () => {
           </div>
         </div>
         <button>J'adhère à l'association</button>
-        {/* <span>{errorMessage}</span> */}
-      </form>
+        {/* <span>{errorMessage}</span> 
+      </form> */}
     </div>
   );
 };
