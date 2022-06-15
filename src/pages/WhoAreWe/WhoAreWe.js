@@ -106,10 +106,14 @@ const WhoAreWe = () => {
         <hr />
         <p>
           "Les amis du pays du Bugeat est une association d'intérêt général qui
-          soutient des <span>projets locaux</span>, organise des{" "}
-          <span>évènements culturels</span> sous forme de conférences,
-          d'expositions, de soirées contes ou d'éditions de livre sur notre
-          village."
+          soutient des <span>projets locaux</span> , organise des{" "}
+          <span>évènements culturels,</span> ateliers artistiques, conférences,
+          expositions, soirées contes, édite des livres en lien avec notre
+          patrimoine. Elle s’est fixé l’objectif de{" "}
+          <span>faire connaître et promouvoir le Pays de Bugeat</span> ,
+          contribuer à la mise en place d’
+          <span>actions sociales, éducatives, et solidaires</span> d’utilité
+          civique, au service du vivre ensemble intergénérationnel."
         </p>
         <hr />
       </div>
@@ -139,7 +143,7 @@ const WhoAreWe = () => {
 
           <HeadquarterCard
             title={"Secrétaire adjoint"}
-            name={"Jacques Saderne"}
+            name={"Jacques Sadern"}
             telephone={"00000000"}
             email={"mail@mail.fr"}
             urlImage={

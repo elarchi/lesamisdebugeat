@@ -1,4 +1,5 @@
 .header__div {
+  // position: fixed;
   h1 {
     font-size: 26px;
     font-weight: 300;
@@ -8,7 +9,6 @@
     font-size: 16px;
     font-weight: 100;
     font-style: italic;
-    margin-top: 20px;
   }
   .header-title__div {
     border-bottom: solid 1px black;
@@ -19,9 +19,18 @@
     img {
       height: 50px;
     }
+  }
+  .header-subtitle__div {
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
 
     .header-logos__div {
       display: flex;
+      height: 18px;
       gap: 55px;
       img {
         height: 18px;
@@ -31,11 +40,6 @@
         cursor: pointer;
       }
     }
-  }
-  .header-subtitle__div {
-    height: 70px;
-    display: flex;
-    justify-content: center;
   }
   .header__nav {
     height: 55px;
@@ -52,7 +56,7 @@
     button,
     .link {
       height: 100%;
-      width: 200px;
+      width: 182px;
       flex: 1;
       background-color: #75913d;
       border: none;
