@@ -95,5 +95,38 @@
       visibility: visible;
       height: 100%;
     }
+
+    .tooltip__button {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip__button .tooltip-txt__span {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+
+      /* Position the tooltip text - see examples below! */
+      position: absolute;
+      top: -50px;
+      left: 35px;
+    }
+    .tooltip__button:hover .tooltip-txt__span {
+      visibility: visible;
+    }
+
+    .tooltip__button .tooltip-txt__span::after {
+      content: " ";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: black transparent transparent transparent;
+    }
   }
 }

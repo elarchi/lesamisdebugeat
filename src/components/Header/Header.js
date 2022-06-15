@@ -53,8 +53,11 @@ const Header = () => {
           {" "}
           <button>PUBLICATIONS</button>
         </Link>
+        <button className="tooltip__button">
+          ARCHIVE
+          <span className="tooltip-txt__span">Page en construction</span>
+        </button>
 
-        <button>ARCHIVE</button>
         <Link to="/contact" className="link">
           {" "}
           <button>CONTACT</button>
