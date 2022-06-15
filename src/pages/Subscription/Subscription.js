@@ -22,23 +22,24 @@ const Subscription = () => {
           l’AG qui se déroule en principe en août.{" "}
           <span className="big-quote__span">» </span>
         </p>
+        <Link to="/who-are-we/status" className="link">
+          Connaître les status de l'association
+        </Link>
       </div>
       <div className="options__div">
         <button className="green__button">Adhésion en ligne</button>
         <span>OU</span>
-        <button className="red__button">Formulaire d'inscription papier</button>
-      </div>
-      {/* <div className="rules__div">
-        <Link to="/who-are-we/status" className="link">
-          Connaître les status de l'association
-        </Link>
         <a
           href="https://drive.google.com/file/d/15Kn1F8rVXSGfUouCEOTo_CUCHyKwXxm-/view?usp=sharing"
           className="link"
           download="lesamisdupaysdebugeat-formulaire-d-adhesion"
         >
-          Télécharger le bulletin d'adhésion papier
+          Formulaire d'inscription papier
         </a>
+      </div>
+      {/* <div className="rules__div">
+       
+        
       </div> */}
       {/* <form action="" className="form">
         <div className="col__div">

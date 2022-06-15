@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="footer__div container">
-      <hr />
       <br />
       <nav className="">
         <Link to="/">Accueil </Link> |{" "}
