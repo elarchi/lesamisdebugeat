@@ -4,12 +4,11 @@ import "./contact.scss";
 const Contact = () => {
   return (
     <div className="contact__div container">
-      <div className="image__div">
-        <img
-          src="https://res.cloudinary.com/dfi0ky1v7/image/upload/v1655210180/contact/sapins_srgjjd.svg"
-          alt="map"
-        />
-      </div>
+      <img
+        src="https://res.cloudinary.com/dfi0ky1v7/image/upload/v1655306617/contact/photos-des-pre%CC%81sident-e-s_xhmy6m.png"
+        alt="map"
+      />
+
       <div className="txt__div">
         <div className="contact__div">
           <h1>✉️ Email</h1>
