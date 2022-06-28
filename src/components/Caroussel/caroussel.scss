@@ -21,6 +21,36 @@
   -ms-flex-align: center;
   -webkit-align-items: flex-start;
   align-items: flex-start;
+
+  div.title {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    h1,
+    h2 {
+      font-family: "inter";
+      font-weight: 300;
+      color: white;
+      text-align: left;
+    }
+    h1 {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 14px;
+    }
+    position: absolute;
+    left: 0;
+
+    height: 100%;
+    width: 400px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.6587228641456583) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
 }
 
 .swiper-slide img {
@@ -28,4 +58,5 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: relative;
 }

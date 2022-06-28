@@ -23,24 +23,53 @@ const Caroussel = () => {
         disableOnInteraction: false,
       }}
       className="mySwiper"
+      style={{
+        "--swiper-navigation-color": "#fff",
+        "--swiper-pagination-color": "#fff",
+      }}
     >
       <SwiperSlide>
         <img
-          src="https://res.cloudinary.com/dn7zdnm89/image/upload/v1653503446/lesAmisDuPaysDeBugeat/_1033073_dt9ive.png"
-          alt=""
+          src="https://res.cloudinary.com/dfi0ky1v7/image/upload/v1656439011/accueil/carrousel/banderole_150x400_OK_o2p8eg.jpg"
+          alt="festival"
         />
+
+        <div className="title">
+          <h1>INAUGURATION DU FESTIVAL 2022</h1>{" "}
+          <h2>Lun 30 juin 2022 | 14:00 - 20:00</h2>
+        </div>
       </SwiperSlide>{" "}
       <SwiperSlide>
         <img
-          src="https://res.cloudinary.com/dn7zdnm89/image/upload/v1653503472/lesAmisDuPaysDeBugeat/_1033043_kyy27c.png"
-          alt=""
+          src="https://res.cloudinary.com/dfi0ky1v7/image/upload/v1656439185/accueil/carrousel/Inauguration_du_Festival_2021_au_Foyer_rural_uoy47h.jpg"
+          alt="inauguration-1"
         />
+        <div className="title">
+          {" "}
+          <h1>INAUGURATION DU FESTIVAL 2022</h1>{" "}
+          <h2>Lun 30 juin 2022 | 14:00 - 20:00</h2>
+        </div>{" "}
       </SwiperSlide>
       <SwiperSlide>
         <img
-          src="https://res.cloudinary.com/dn7zdnm89/image/upload/v1653503461/lesAmisDuPaysDeBugeat/_1011838_qs1rih.png"
-          alt=""
+          src="https://res.cloudinary.com/dfi0ky1v7/image/upload/v1656439185/accueil/carrousel/Inauguration_expo_aquarelles_yuzlzp.jpg"
+          alt="expo"
         />
+        <div className="title">
+          <h1>INAUGURATION DU FESTIVAL 2022</h1>{" "}
+          <h2>Lun 30 juin 2022 | 14:00 - 20:00</h2>
+        </div>{" "}
+      </SwiperSlide>
+      <SwiperSlide>
+        <img
+          src="https://res.cloudinary.com/dfi0ky1v7/image/upload/v1656439428/accueil/carrousel/Artistes_et_artisans_expo_photos_-_du_4_au_13_aout_2022_-_Au_Foyer_rural_vy6gbi.jpg"
+          alt="artisan"
+        />
+        <div className="title">
+          {" "}
+          <h1>INAUGURATION DU FESTIVAL 2022</h1>{" "}
+          <h2>Lun 30 juin 2022 | 14:00 - 20:00</h2>
+        </div>{" "}
       </SwiperSlide>
     </Swiper>
   );

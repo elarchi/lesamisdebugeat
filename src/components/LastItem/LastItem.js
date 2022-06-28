@@ -40,6 +40,7 @@ const LastItem = ({ title, items, span }) => {
       <div className="more-infos__div">
         {" "}
         <span>{span}</span>
+        <div className="sqr">＋</div>
       </div>
     </div>
   );
