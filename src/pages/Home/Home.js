@@ -3,6 +3,7 @@ import "./home.scss";
 //Importation des components
 import LastItem from "../../components/LastItem/LastItem";
 import Caroussel from "../../components/Caroussel/Caroussel";
+import ComingSoon from "../../components/ComingSoon/ComingSoon";
 
 const Home = () => {
   // Pour modifier un évènement, l'URL de son image, son titre, son texte : c'est ici.
@@ -57,14 +58,10 @@ const Home = () => {
       {/* Pour ajouter une image au carousel, copier-coller un composant 'SwiperSLide'déjà présent, et modifier l'URL avec l'URL de la nouvelle image. */}
 
       {/* Pour supprimer une image du carousel, sélectionner le composant où se trouve l'URL de l'image et supprimez le. */}
-
-      <Caroussel />
-
-      <LastItem
-        title="Évènements à venir"
-        items={events}
-        span="Voir plus d'évènements"
-      />
+      <div className="headband">
+        <Caroussel />
+        <ComingSoon />
+      </div>
 
       <LastItem
         title="Derniers évènements"

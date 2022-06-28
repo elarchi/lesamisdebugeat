@@ -1,3 +1,15 @@
 .home__div {
   margin-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  div.headband {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+    height: 500px;
+    // border: solid red 3px;
+    justify-content: space-between;
+  }
 }
