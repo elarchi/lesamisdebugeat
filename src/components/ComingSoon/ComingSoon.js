@@ -3,7 +3,7 @@ import "./comingsoon.scss";
 const ComingSoon = () => {
   return (
     <div className="green-sqr">
-      <h1>À VENIR</h1>
+      <h1>ÉVÈNEMENTS À VENIR</h1>
       <div className="event">
         <h2>Peinture</h2>
         <h3>Lun 30 juin 2022, 14:00-17:00</h3>

@@ -1,38 +1,11 @@
-//Importation des feuilles de style
 import "./whoarewe.scss";
-//Importation des components
+
 import HeadquarterCard from "../../components/HeadquarterCard/HeadquarterCard";
 import { Link } from "react-router-dom";
-// import { useState } from "react";
-//Importation des composants UI
-import * as React from "react";
-import Dialog from "@mui/material/Dialog";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import Slide from "@mui/material/Slide";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
+
+import Timeline from "../../components/Timeline/Timeline";
 
 const WhoAreWe = () => {
-  const Transition = React.forwardRef(function Transition(props, ref) {
-    return <Slide direction="up" ref={ref} {...props} />;
-  });
-
-  const [open, setOpen] = React.useState(false);
-  // const [indexName, setIndexName] = useState();
-  const handleClickOpen = (i) => {
-    // setIndexName(i);
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   let members = [
     "AUGRIS Baptiste",
     "AUPRETRE Daniel",
@@ -102,29 +75,75 @@ const WhoAreWe = () => {
 
   return (
     <div className="whoarewe__div container">
-      <div className="quote__div">
-        <hr />
-        <p>
-          "Les amis du pays du Bugeat est une association d'intérêt général qui
-          soutient des <span>projets locaux</span> , organise des{" "}
-          <span>évènements culturels,</span> ateliers artistiques, conférences,
-          expositions, soirées contes, édite des livres en lien avec notre
-          patrimoine. Elle s’est fixé l’objectif de{" "}
-          <span>faire connaître et promouvoir le Pays de Bugeat</span> ,
-          contribuer à la mise en place d’
-          <span>actions sociales, éducatives, et solidaires</span> d’utilité
-          civique, au service du vivre ensemble intergénérationnel."
-        </p>
-        <hr />
+      <div className="introduction">
+        <div className="quote__div">
+          <h1>L'association, en bref</h1>
+          {/* <p>
+            Nous sommes une association d'intérêt général qui :
+            <ul>
+              <li>
+                {" "}
+                soutient des <span>projets locaux</span>,
+              </li>
+              <li>
+                des organise des <span>évènements culturels,</span>
+              </li>
+              <li>des ateliers artistiques, </li>
+              <li>des conférences et expositions, </li>
+              <li>des soirées contes, </li>
+              <li>et édite des livres</li>
+            </ul>
+            Chacun de ces évènements est en lien avec notre patrimoine. <br />
+          </p>
+          <p>
+            Nous nous sommes fixé l’objectif :
+            <ul>
+              <li>
+                de <span>faire connaître et promouvoir le Pays de Bugeat</span>,
+              </li>
+              <li>
+                {" "}
+                contribuer à la mise en place d’
+                <span>actions sociales, éducatives, et solidaires</span>{" "}
+                d’utilité civique, au service du vivre ensemble
+                intergénérationnel.
+              </li>
+            </ul>
+          </p> */}
+          <p>
+            "Les amis du pays du Bugeat est une association d'intérêt général
+            qui <span>soutient des projets locaux</span>,{" "}
+            <span>organise des évènements culturels</span> , ateliers
+            artistiques, conférences, expositions, soirées contes, édite des
+            livres <span>en lien avec notre patrimoine</span> . <br />
+            <br /> Elle s’est fixé l’objectif de{" "}
+            <span>faire connaître et promouvoir le Pays de Bugeat</span>,
+            contribuer à la mise en place d’actions sociales, éducatives, et
+            solidaires d’utilité civique, au service du vivre ensemble
+            intergénérationnel."
+          </p>
+        </div>
+        <div className="video">
+          <video controls>
+            <source
+              src="https://res.cloudinary.com/dfi0ky1v7/video/upload/v1656443864/qui-sommes-nous/video/balade-memorielle_lp3cir.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </div>
+
+      <div className="timeline">
+        <Timeline />
       </div>
       <div className="headquarter__div">
         <h1>Notre bureau</h1>
-        <FontAwesomeIcon icon={faChevronLeft} className="fa-thin icon" />
+
         <div className="cards__div ">
           <HeadquarterCard
             title={"Trésorier adjoint"}
             name={"Bernard Jamilloux"}
-            telephone={"00-00-00-00-00"}
+            telephone={"-"}
             email={" jamillouxb@gmail.com"}
             urlImage={
               "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654622510/qui-sommes-nous/bureau/bernard-jamilloux_tresorier-adjoint_fqbcne.jpg"
@@ -144,8 +163,8 @@ const WhoAreWe = () => {
           <HeadquarterCard
             title={"Secrétaire adjoint"}
             name={"Jacques Sadern"}
-            telephone={"00000000"}
-            email={"mail@mail.fr"}
+            telephone={"-"}
+            email={"-"}
             urlImage={
               "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654618477/sample.jpg"
             }
@@ -164,8 +183,8 @@ const WhoAreWe = () => {
           <HeadquarterCard
             title={"Président d'honneur"}
             name={"Jean-Marie Borzeix"}
-            telephone={"00-00-00-00-00"}
-            email={"xxx@mail.fr"}
+            telephone={"-"}
+            email={"-"}
             urlImage={
               "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654618477/sample.jpg"
             }
@@ -174,8 +193,8 @@ const WhoAreWe = () => {
           <HeadquarterCard
             title={"Président d'honneur"}
             name={"Jean-Marie Bourre"}
-            telephone={"00-00-00-00-00"}
-            email={"xxx@mail.fr"}
+            telephone={"-"}
+            email={"-"}
             urlImage={
               "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654618477/sample.jpg"
             }
@@ -184,8 +203,8 @@ const WhoAreWe = () => {
           <HeadquarterCard
             title={"Secrétaire adjoint"}
             name={"Jean-Pierre Mourieras"}
-            telephone={"00000000"}
-            email={"mail@mail.fr"}
+            telephone={"-"}
+            email={"-"}
             urlImage={
               "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654618477/sample.jpg"
             }
@@ -221,7 +240,6 @@ const WhoAreWe = () => {
             }
           />
         </div>
-        <FontAwesomeIcon icon={faChevronRight} className="fa-thin icon" />
       </div>
       <div className="members__div">
         <h1>Nos membres</h1>
@@ -230,39 +248,16 @@ const WhoAreWe = () => {
           {" "}
           {members.map((name, index) => {
             return (
-              <span
-                key={index}
-                // onClick={() => {
-                //   handleClickOpen(index);
-                // }}
-                onClick={handleClickOpen}
-              >
+              <span>
                 {name} <br />
               </span>
             );
           })}
-          <Dialog
-            open={open}
-            TransitionComponent={Transition}
-            keepMounted
-            onClose={handleClose}
-            aria-describedby="alert-dialog-slide-description"
-          >
-            <DialogTitle>{"Nom du contact"}</DialogTitle>
-            <DialogContent>
-              <DialogContentText id="alert-dialog-slide-description">
-                Let Google help apps determine location. This means sending
-                anonymous location data to Google, even when no apps are
-                running.
-              </DialogContentText>
-            </DialogContent>
-          </Dialog>
           <br />
-          <Link to="/subscription">
-            <button>Devenir membre</button>
-          </Link>
         </div>
-        {/* <div className="button__div"></div> */}
+        <Link to="/subscription">
+          <button>Devenir membre</button>
+        </Link>
       </div>
     </div>
   );

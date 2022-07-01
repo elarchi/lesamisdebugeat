@@ -3,22 +3,38 @@
   margin-bottom: 150px;
 
   h1 {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 28px;
   }
 
-  .quote__div {
-    margin-top: 50px;
-    hr {
-      border-top: solid 2px black;
+  div.introduction {
+    margin: 30px 0 80px 0;
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    justify-content: space-between;
+    // align-items: center;
+    .quote__div {
+      width: 40%;
+      hr {
+        border-top: solid 2px black;
+      }
+      p {
+        width: 100%;
+        font-size: 16px;
+        text-align: justify;
+        line-height: 2;
+        span {
+          color: #75913d;
+        }
+      }
     }
-    p {
-      width: 100%;
-      font-size: 16px;
-      text-align: justify;
-      line-height: 2;
-      span {
-        color: #75913d;
+
+    .video {
+      margin: 0 0 30px 0;
+      width: 50%;
+      video {
+        width: 100%;
       }
     }
   }
@@ -31,23 +47,16 @@
     .cards__div {
       display: flex;
       gap: 5px;
-      height: 600px;
-      flex-wrap: nowrap;
-      overflow: hidden;
-      overflow-x: scroll;
-    }
-
-    i {
-      height: 50px;
-    }
-
-    .icon {
-      color: rgb(200, 198, 198);
-      opacity: 50%;
-      font-size: 60px;
+      // height: 600px;
+      flex-wrap: wrap;
+      // overflow: hidden;
+      // overflow-x: scroll;
     }
   }
   .members__div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     .membersList__div {
       font-size: 18px;
       column-count: 4;
@@ -57,20 +66,21 @@
         text-decoration: underline;
         cursor: pointer;
       }
-      button {
-        background-color: #75913d;
-        color: white;
-        height: 50px;
-        width: 100%;
-        font-size: 20px;
-        border: none;
-      }
-      button:hover {
-        background-color: white;
-        color: #75913d;
-        border: #75913d solid 1px;
-        cursor: pointer;
-      }
+    }
+    button {
+      background-color: #75913d;
+      color: white;
+      height: 50px;
+      width: 100%;
+      font-size: 20px;
+      border: none;
+      margin-top: 30px;
+    }
+    button:hover {
+      background-color: white;
+      color: #75913d;
+      border: #75913d solid 1px;
+      cursor: pointer;
     }
   }
 }

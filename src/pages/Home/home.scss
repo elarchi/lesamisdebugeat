@@ -11,5 +11,9 @@
     height: 500px;
     // border: solid red 3px;
     justify-content: space-between;
+
+    div.vertical-separator {
+      border-left: solid rgba(0, 0, 0, 0.19) 1px;
+    }
   }
 }

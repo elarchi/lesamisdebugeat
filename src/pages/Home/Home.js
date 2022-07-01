@@ -60,6 +60,7 @@ const Home = () => {
       {/* Pour supprimer une image du carousel, sélectionner le composant où se trouve l'URL de l'image et supprimez le. */}
       <div className="headband">
         <Caroussel />
+        <div className="vertical-separator"></div>
         <ComingSoon />
       </div>
 

@@ -11,6 +11,7 @@ const Subscription = () => {
   //"Merci d'accepter le règlement"
 
   const [formIsOpen, setFormIsOpen] = useState(false);
+
   const handleForm = () => {
     if (formIsOpen === false) {
       setFormIsOpen(true);
@@ -18,6 +19,10 @@ const Subscription = () => {
       setFormIsOpen(false);
     }
   };
+
+  const [paperForm, setPaperForm] = useState(0);
+  //0 not downloaded
+  //1 downloaded
 
   return (
     <div
@@ -48,14 +53,27 @@ const Subscription = () => {
         <span>OU</span>
 
         <a
-          href="https://drive.google.com/file/d/15Kn1F8rVXSGfUouCEOTo_CUCHyKwXxm-/view?usp=sharing"
+          href="https://res.cloudinary.com/dfi0ky1v7/raw/upload/v1656447522/nous-rejoindre/Bulletin_d_adh%C3%A9sion_ADPDB_ositfb.docx"
           className="link"
           download="lesamisdupaysdebugeat-formulaire-d-adhesion"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => {
+            setPaperForm(1);
+          }}
         >
           Formulaire d'inscription papier
         </a>
+      </div>
+
+      <div className="informations">
+        {" "}
+        <span
+          className={paperForm === 1 ? "paperForm1-span" : "paperForm0-span"}
+        >
+          Le formulaire a été téléchargé. Vous le retrouverez dans vos
+          téléchargements.
+        </span>
       </div>
 
       {/* <div className="rules__div">
