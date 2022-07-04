@@ -5,18 +5,18 @@ const ComingSoon = () => {
     <div className="green-sqr">
       <h1>ÉVÈNEMENTS À VENIR</h1>
       <div className="event">
-        <h2>Peinture</h2>
-        <h3>Lun 30 juin 2022, 14:00-17:00</h3>
+        <h2>
+          Concert « L’accordéon dans tous ses états » avec Sébastien Farge et
+          Giovanni Angotta
+        </h2>
+        <h3>[Lun 8 août 2022 20:30]</h3>
         <hr />
       </div>
       <div className="event">
-        <h2>Collage</h2>
-        <h3>Mer 12 juillet 2022, 18:00-20:00</h3>
-        <hr />
-      </div>
-      <div className="event">
-        <h2>Visite du centre</h2>
-        <h3>Jeu 04 juillet 2022, 16:00-19:00</h3>
+        <h2>
+          Concerts Pascale Forgerit, Léopold Sers et Le Petit Choeur Qui Bat
+        </h2>
+        <h3>[Du 5 au 10 août 2022]</h3>
         <hr />
       </div>
     </div>

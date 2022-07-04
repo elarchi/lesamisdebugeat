@@ -30,7 +30,7 @@ const Caroussel = () => {
     >
       <SwiperSlide>
         <img
-          src="https://res.cloudinary.com/dfi0ky1v7/image/upload/v1656439011/accueil/carrousel/banderole_150x400_OK_o2p8eg.jpg"
+          src="https://res.cloudinary.com/dfi0ky1v7/image/upload/v1656957197/accueil/carrousel/Vue_de_Bugeat_pour_annonce_Festival_f7ak6z.jpg"
           alt="festival"
         />
 
