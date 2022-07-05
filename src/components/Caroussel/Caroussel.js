@@ -35,40 +35,29 @@ const Caroussel = () => {
         />
 
         <div className="title">
-          <h1>INAUGURATION DU FESTIVAL 2022</h1>{" "}
-          <h2>Lun 30 juin 2022 | 14:00 - 20:00</h2>
+          <h1>
+            FESTIVAL DE BUGEAT <br />
+            ÉDITION 2022 !
+          </h1>{" "}
+          <h2>Du 1er au 13 août 2022 | Places limitées</h2>
         </div>
       </SwiperSlide>{" "}
       <SwiperSlide>
         <img
-          src="https://res.cloudinary.com/dfi0ky1v7/image/upload/v1656439185/accueil/carrousel/Inauguration_du_Festival_2021_au_Foyer_rural_uoy47h.jpg"
+          src="https://res.cloudinary.com/dfi0ky1v7/image/upload/v1656439428/accueil/carrousel/Artistes_et_artisans_expo_photos_-_du_4_au_13_aout_2022_-_Au_Foyer_rural_vy6gbi.jpg"
           alt="inauguration-1"
         />
         <div className="title">
           {" "}
-          <h1>INAUGURATION DU FESTIVAL 2022</h1>{" "}
-          <h2>Lun 30 juin 2022 | 14:00 - 20:00</h2>
-        </div>{" "}
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          src="https://res.cloudinary.com/dfi0ky1v7/image/upload/v1656439185/accueil/carrousel/Inauguration_expo_aquarelles_yuzlzp.jpg"
-          alt="expo"
-        />
-        <div className="title">
-          <h1>INAUGURATION DU FESTIVAL 2022</h1>{" "}
-          <h2>Lun 30 juin 2022 | 14:00 - 20:00</h2>
-        </div>{" "}
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          src="https://res.cloudinary.com/dfi0ky1v7/image/upload/v1656439428/accueil/carrousel/Artistes_et_artisans_expo_photos_-_du_4_au_13_aout_2022_-_Au_Foyer_rural_vy6gbi.jpg"
-          alt="artisan"
-        />
-        <div className="title">
-          {" "}
-          <h1>INAUGURATION DU FESTIVAL 2022</h1>{" "}
-          <h2>Lun 30 juin 2022 | 14:00 - 20:00</h2>
+          <h1>
+            INAUGURATION <br />
+            DU FESTIVAL
+          </h1>{" "}
+          <h2>
+            {" "}
+            Avec l'exposition « Artistes et artisans de la pierre à Bugeat »
+          </h2>
+          <h2>Jeu 04 août 2022 | Sous le préau derrière la mairie</h2>
         </div>{" "}
       </SwiperSlide>
     </Swiper>
