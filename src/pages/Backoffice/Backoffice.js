@@ -6,7 +6,7 @@ const Backoffice = () => {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [location, setLocation] = useState("");
-  const [urlImages, setUrlImages] = useState("");
+  const [URLpictures, setURLpictures] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [urlProg, setUrlProg] = useState("");
@@ -22,7 +22,7 @@ const Backoffice = () => {
           date,
           time,
           location,
-          urlImages,
+          URLpictures,
           description,
           price,
           urlProg,
@@ -69,7 +69,7 @@ const Backoffice = () => {
           type="text"
           placeholder="Url des images"
           onChange={(event) => {
-            setUrlImages(event.target.value);
+            setURLpictures(event.target.value);
           }}
         />
         <input
