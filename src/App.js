@@ -12,6 +12,7 @@ import Contact from "./pages/Contact/Contact";
 import Events from "./pages/Events/Events";
 import Publications from "./pages/Publications/Publications";
 import Status from "./pages/Status/Status";
+import Backoffice from "./pages/Backoffice/Backoffice";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/publications" element={<Publications />} />
           <Route path="/who-are-we/status" element={<Status />} />
+          <Route path="/backoffice" element={<Backoffice />} />
         </Routes>
         <Footer />
       </Router>
