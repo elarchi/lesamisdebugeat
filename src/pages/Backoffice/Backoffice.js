@@ -6,7 +6,6 @@ const Backoffice = () => {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [location, setLocation] = useState("");
-  const [author, setAuthor] = useState("");
   const [urlImages, setUrlImages] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
@@ -23,7 +22,6 @@ const Backoffice = () => {
           date,
           time,
           location,
-          author,
           urlImages,
           description,
           price,
@@ -65,13 +63,6 @@ const Backoffice = () => {
           placeholder="Lieu"
           onChange={(event) => {
             setLocation(event.target.value);
-          }}
-        />
-        <input
-          type="text"
-          placeholder="Autrice/Auteur"
-          onChange={(event) => {
-            setAuthor(event.target.value);
           }}
         />
         <input
