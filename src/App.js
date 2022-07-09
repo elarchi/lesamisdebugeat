@@ -29,7 +29,7 @@ function App() {
           <Route path="/publications" element={<Publications />} />
           <Route path="/who-are-we/status" element={<Status />} />
           <Route path="/backoffice" element={<Backoffice />} />
-          <Route path="/backoffice" element={<Test />} />
+          <Route path="/test" element={<Test />} />
         </Routes>
         <Footer />
       </Router>
