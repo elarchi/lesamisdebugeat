@@ -3,10 +3,11 @@ import axios from "axios";
 import "./createContentForm.scss";
 
 const CreateContentForm = ({ createEvent }) => {
+  let content = "";
   if (createEvent === true) {
-    let content = "event";
+    content = "event";
   } else {
-    let content = "publication";
+    content = "publication";
   }
 
   const [title, setTitle] = useState("");
