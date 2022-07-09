@@ -120,9 +120,29 @@ const CreateContentForm = ({ createEvent }) => {
               setURLpictures(event.target.value);
             }}
           />
-          <input type="checkbox" id="Carousel" />
+          <input
+            type="checkbox"
+            id="Carousel"
+            onClick={() => {
+              if (carousel === false) {
+                setCarousel(true);
+              } else {
+                setCarousel(false);
+              }
+            }}
+          />
           <label htmlFor="Carousel">Accueil/Carrousel</label>
-          <input type="checkbox" id="ComingSoonEvent" />
+          <input
+            type="checkbox"
+            id="ComingSoonEvent"
+            onClick={() => {
+              if (comingSoonEvent === false) {
+                setComingSoonEvent(true);
+              } else {
+                setComingSoonEvent(false);
+              }
+            }}
+          />
           <label htmlFor="ComingSoonEvent">Accueil/Évènement à venir</label>
           <input
             type="text"
