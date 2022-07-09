@@ -120,7 +120,8 @@ const Backoffice = () => {
             setURLpictures(event.target.value);
           }}
         />
-        <button type="submit">Créer l'évènement</button>
+
+        <input type="submit" value="Créer l'évènement"></input>
       </form>
       <form onSubmit={handleSubmitPublication}>
         <input
@@ -173,7 +174,9 @@ const Backoffice = () => {
             setURLreservation(event.target.value);
           }}
         />
-        <button type="submit">Créer l'évènement</button>
+        <input type="submit" value="Créer la publication">
+          {" "}
+        </input>
       </form>
     </div>
   );
