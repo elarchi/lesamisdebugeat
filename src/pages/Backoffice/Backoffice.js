@@ -121,7 +121,7 @@ const Backoffice = () => {
           }}
         />
 
-        <input type="submit" value="Créer l'évènement"></input>
+        <input type="submit" value="Créer l'évènement" />
       </form>
       <form onSubmit={handleSubmitPublication}>
         <input
@@ -174,9 +174,7 @@ const Backoffice = () => {
             setURLreservation(event.target.value);
           }}
         />
-        <input type="submit" value="Créer la publication">
-          {" "}
-        </input>
+        <input type="submit" value="Créer la publication" />
       </form>
     </div>
   );
