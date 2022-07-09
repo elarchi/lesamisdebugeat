@@ -22,7 +22,7 @@ const CreateContentForm = ({ createEvent }) => {
   const [edition, setEdition] = useState("");
   const [URLreservation, setURLreservation] = useState("");
   const [carousel, setCarousel] = useState(false);
-  const [comingSoonEvent] = useState(false);
+  const [comingSoonEvent, setComingSoonEvent] = useState(false);
   const [URLpicture, setURLpicture] = useState("");
 
   const handleSubmit = async (event, content) => {
@@ -60,7 +60,7 @@ const CreateContentForm = ({ createEvent }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit(content)}>
       {createEvent ? (
         <div>
           {/* Event form */}
