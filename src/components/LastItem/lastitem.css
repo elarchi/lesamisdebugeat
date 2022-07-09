@@ -1,0 +1,116 @@
+.last__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: inter;
+  margin-top: 30px;
+}
+
+.last__div h1 {
+  font-weight: 500;
+}
+
+.last__div .cards__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.last__div .cards__div .card__div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.last__div .cards__div .card__div hr {
+  border-top: 2px solid black;
+  margin-bottom: 20px;
+}
+
+.last__div .cards__div .card__div img {
+  width: 100%;
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.last__div .cards__div .card__div img:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+.last__div .cards__div .card__div .card-titles__div h2 {
+  font-weight: 600;
+  line-height: 0;
+}
+
+.last__div .cards__div .card__div .card-titles__div h3 {
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.last__div .cards__div .card__div p {
+  text-align: justify;
+}
+
+.last__div .cards__div .card__div:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.last__div .more-infos__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.last__div .more-infos__div span {
+  font-size: 11px;
+  font-style: italic;
+}
+
+.last__div .more-infos__div div.sqr {
+  background-color: white;
+  border: black solid 1px;
+  height: 30px;
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: black;
+  font-size: 24px;
+}
+
+.last__div .more-infos__div span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.last__div .sqr:hover {
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+/*# sourceMappingURL=lastitem.css.map */

@@ -29,10 +29,13 @@ const Header = () => {
               alt="instagram-logo"
             />
           </a>
-          <img
-            src="https://res.cloudinary.com/dn7zdnm89/image/upload/v1653493317/lesAmisDuPaysDeBugeat/youtube_boivug.png"
-            alt="youtube-logo"
-          />
+          <Link to="/backoffice">
+            {" "}
+            <img
+              src="https://res.cloudinary.com/dfi0ky1v7/image/upload/v1657388944/header/computer-icons-back-office-management-png-favpng-kMn8LpwuRVf0Yw5ePjU0kRCaL_rkb5vx.jpg"
+              alt="backoffice-logo"
+            />
+          </Link>
         </div>
       </div>
       <nav className="header__nav">

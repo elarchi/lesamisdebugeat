@@ -1,0 +1,36 @@
+.heardquarterCard__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: inter;
+  line-height: 0.3;
+  gap: 5px;
+  width: 250px;
+  margin-bottom: 50px;
+}
+
+.heardquarterCard__div img {
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.heardquarterCard__div h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.heardquarterCard__div h3 {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.heardquarterCard__div p {
+  font-size: 14px;
+}
+/*# sourceMappingURL=headquartercard.css.map */

@@ -1,0 +1,38 @@
+.archive__div h1 {
+  font-weight: 500;
+}
+
+.archive__div .list-of-content__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.archive__div .list-of-content__div .cardContent__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.archive__div .list-of-content__div .cardContent__div h2 {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.archive__div .list-of-content__div .cardContent__div:hover {
+  border-bottom: solid red 1px;
+  cursor: pointer;
+}
+
+.archive__div .list-of-content__div .cardContent__div:hover h2 {
+  font-size: 26px;
+  color: red;
+}
+/*# sourceMappingURL=archives.css.map */
