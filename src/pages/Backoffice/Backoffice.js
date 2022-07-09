@@ -10,12 +10,15 @@ const Backoffice = () => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [urlProg, setUrlProg] = useState("");
+  const [author, setAuthor] = useState("");
+  const [edition, setEdition] = useState("");
+  const [URLreservation, setURLreservation] = useState("");
 
-  const handleSubmit = async (event) => {
+  const handleSubmitEvent = async (event) => {
     event.preventDefault();
     try {
       const response = await axios.post(
-        "https://lesamisdebugeat.herokuapp.com/backoffice",
+        "https://lesamisdebugeat.herokuapp.com/backoffice/create-event",
         {
           //title:title,
           title,
@@ -34,9 +37,31 @@ const Backoffice = () => {
     }
   };
 
+  const handleSubmitPublication = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post(
+        "https://lesamisdebugeat.herokuapp.com/backoffice/create-publication",
+        {
+          //title:title,
+          title,
+          author,
+          edition,
+          URLpictures,
+          description,
+          price,
+          URLreservation,
+        }
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   return (
     <div className="backoffice-content">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmitEvent}>
         <input
           type="text"
           placeholder="Titre"
@@ -65,13 +90,7 @@ const Backoffice = () => {
             setLocation(event.target.value);
           }}
         />
-        <input
-          type="text"
-          placeholder="Url des images"
-          onChange={(event) => {
-            setURLpictures(event.target.value);
-          }}
-        />
+
         <input
           type="text"
           placeholder="Description"
@@ -91,6 +110,67 @@ const Backoffice = () => {
           placeholder="Lien du programme"
           onChange={(event) => {
             setUrlProg(event.target.value);
+          }}
+        />
+
+        <input
+          type="text"
+          placeholder="Url des images"
+          onChange={(event) => {
+            setURLpictures(event.target.value);
+          }}
+        />
+        <button type="submit">Créer l'évènement</button>
+      </form>
+      <form onSubmit={handleSubmitPublication}>
+        <input
+          type="text"
+          placeholder="Titre"
+          onChange={(event) => {
+            setTitle(event.target.value);
+          }}
+        />
+        <input
+          type="text"
+          placeholder="Date"
+          onChange={(event) => {
+            setDate(event.target.value);
+          }}
+        />
+        <input
+          type="text"
+          placeholder="Autrice/Auteur"
+          onChange={(event) => {
+            setAuthor(event.target.value);
+          }}
+        />
+        <input
+          type="text"
+          placeholder="Édition"
+          onChange={(event) => {
+            setEdition(event.target.value);
+          }}
+        />
+
+        <input
+          type="text"
+          placeholder="Description"
+          onChange={(event) => {
+            setDescription(event.target.value);
+          }}
+        />
+        <input
+          type="text"
+          placeholder="Prix"
+          onChange={(event) => {
+            setPrice(event.target.value);
+          }}
+        />
+        <input
+          type="text"
+          placeholder="Url de la réservation"
+          onChange={(event) => {
+            setURLreservation(event.target.value);
           }}
         />
         <button type="submit">Créer l'évènement</button>
