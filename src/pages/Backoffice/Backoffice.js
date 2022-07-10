@@ -1,5 +1,6 @@
 import { useState } from "react";
-import CreateContentForm from "../../components/CreateContentForm/CreateContentForm";
+import CreateEventForm from "../../components/CreateEventForm/CreateEventForm";
+import CreatePublicationForm from "../../components/CreatePublicationForm/CreatePublicationForm";
 
 const Backoffice = () => {
   const [createEvent, setCreateEvent] = useState(true);
@@ -25,7 +26,13 @@ const Backoffice = () => {
       >
         Je veux créer une publication
       </button>
-      {formOpened ? <CreateContentForm createEvent={createEvent} /> : null}
+      {formOpened ? (
+        createEvent ? (
+          <CreateEventForm />
+        ) : (
+          <CreatePublicationForm />
+        )
+      ) : null}
     </div>
   );
 };
