@@ -17,8 +17,8 @@ const Footer = () => {
         <Link to="/backoffice">Backoffice</Link>
       </nav>
       <p>
-        © 2022, designed and developed by{" "}
-        <a href="mailto:emilie.leury@gmail.com">Emilie Leury</a>
+        © 2022, designed and developed by
+        <a href="https://github.com/elarchi"> Emilie Leury</a>
       </p>
     </div>
   );
