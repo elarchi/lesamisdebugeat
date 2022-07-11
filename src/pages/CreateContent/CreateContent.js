@@ -34,7 +34,7 @@ const CreateContent = () => {
             Créer un évènement
           </button>
         </Link>
-        <Link to="/" className="link-btn">
+        <Link to="/backoffice/create-content/publication" className="link-btn">
           {" "}
           <button
             onClick={() => {

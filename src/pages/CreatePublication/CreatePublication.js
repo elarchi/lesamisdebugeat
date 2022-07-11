@@ -1,42 +1,32 @@
+import "./createPublication.scss";
 import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import "./createEvent.scss";
-
-const CreateEvent = () => {
+const CreatePublication = () => {
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
-  const [location, setLocation] = useState("");
-  const [URLpictures, setURLpictures] = useState("");
+  const [author, setAuthor] = useState("");
+  const [edition, setEdition] = useState("");
+  const [URLpicture, setURLpicture] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
-  const [URLprogrammation, setURLprog] = useState("");
-  const [carousel, setCarousel] = useState(false);
-  const [comingSoonEvent, setComingSoonEvent] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       console.log(2);
       const response = await axios.post(
-        `https://lesamisdebugeat.herokuapp.com/backoffice/create-event`,
+        `https://lesamisdebugeat.herokuapp.com/backoffice/create-publication`,
         {
           //title:title,
-          //event
           title,
           date,
-          time,
-          location,
-          URLpictures,
           description,
           price,
-          display: {
-            carousel,
-            comingSoonEvent,
-          },
-          URLprogrammation,
+          author,
+          edition,
+          URLpicture,
         }
       );
       console.log(4);
@@ -46,15 +36,14 @@ const CreateEvent = () => {
       console.log(error.message);
     }
   };
-
   return (
-    <div className="createEvent-page container">
+    <div className="createPublication-page container">
       <div className="titles">
-        <h1>Créer un évènement</h1>
+        <h1>Créer une publication</h1>
         <h2>
           <Link to="/backoffice">Accueil</Link> /{" "}
           <Link to="/backoffice/create-content">Créer du contenu</Link> / Créer
-          un évènement
+          une publication
         </h2>
       </div>
       <form onSubmit={handleSubmit}>
@@ -69,41 +58,39 @@ const CreateEvent = () => {
           />
         </div>
         <div className="input-style">
-          <h3>Date </h3>
+          <h3>Date</h3>
           <input
             type="text"
             id="Date"
-            placeholder="lun 24 juin 2022"
             onChange={(event) => {
               setDate(event.target.value);
             }}
           />
         </div>
         <div className="input-style">
-          <h3>Heure</h3>
+          <h3>Autrice/Auteur</h3>
           <input
             type="text"
-            id="Heure"
-            placeholder="14:00 - 16:00"
+            id="Autrice/Auteur"
             onChange={(event) => {
-              setTime(event.target.value);
+              setAuthor(event.target.value);
             }}
           />
         </div>
         <div className="input-style">
-          <h3>Lieu</h3>
+          <h3>Édition</h3>{" "}
           <input
             type="text"
-            id="Lieu"
+            id="Édition"
             onChange={(event) => {
-              setLocation(event.target.value);
+              setEdition(event.target.value);
             }}
           />
         </div>
         <div className="input-style">
-          <h3>Description</h3>
+          <h3>Description</h3>{" "}
           <textarea
-            type="textarea"
+            type="text"
             id="Description"
             className="description-area"
             onChange={(event) => {
@@ -112,12 +99,12 @@ const CreateEvent = () => {
           />
         </div>
         <div className="input-style">
-          <h3>Lien URL du programme</h3>
+          <h3>URL de l'image de couverture</h3>
           <input
             type="text"
-            id="Lien du programme"
+            id="URL de la couverture"
             onChange={(event) => {
-              setURLprog(event.target.value);
+              setURLpicture(event.target.value);
             }}
           />
         </div>
@@ -131,50 +118,6 @@ const CreateEvent = () => {
             }}
           />{" "}
         </div>
-        <div className="input-style">
-          <h3>URL des images</h3>{" "}
-          <input
-            type="text"
-            id="URL des images"
-            onChange={(event) => {
-              setURLpictures(event.target.value);
-            }}
-          />
-        </div>
-
-        <div className="display">
-          <h3>Où l'évènement doit-il apparaître ?</h3>
-
-          <div className="checkbox-style">
-            <input
-              type="checkbox"
-              id="Carousel"
-              onClick={() => {
-                if (carousel === false) {
-                  setCarousel(true);
-                } else {
-                  setCarousel(false);
-                }
-              }}
-            />
-
-            <label htmlFor="Carousel">Accueil/Carrousel</label>
-          </div>
-          <div className="chekbox-style">
-            <input
-              type="checkbox"
-              id="ComingSoonEvent"
-              onClick={() => {
-                if (comingSoonEvent === false) {
-                  setComingSoonEvent(true);
-                } else {
-                  setComingSoonEvent(false);
-                }
-              }}
-            />
-            <label htmlFor="ComingSoonEvent">Accueil/Évènement à venir</label>
-          </div>
-        </div>
 
         <button type="submit">
           Sauvegarder et publier l'évènement sur le site
@@ -184,4 +127,4 @@ const CreateEvent = () => {
   );
 };
 
-export default CreateEvent;
+export default CreatePublication;

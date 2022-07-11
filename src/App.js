@@ -15,6 +15,7 @@ import Status from "./pages/Status/Status";
 import Backoffice from "./pages/Backoffice/Backoffice";
 import CreateContent from "./pages/CreateContent/CreateContent";
 import CreateEvent from "./pages/CreateEvent/CreateEvent";
+import CreatePublication from "./pages/CreatePublication/CreatePublication";
 
 function App() {
   return (
@@ -37,6 +38,10 @@ function App() {
           <Route
             path="/backoffice/create-content/event"
             element={<CreateEvent />}
+          />
+          <Route
+            path="/backoffice/create-content/publication"
+            element={<CreatePublication />}
           />
         </Routes>
         <Footer />
