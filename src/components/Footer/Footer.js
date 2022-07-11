@@ -13,7 +13,8 @@ const Footer = () => {
         <Link to="/subscription">Devenir membre</Link> |{" "}
         <Link to="/events">Évènements</Link> |{" "}
         <Link to="/publications">Publications</Link> | Archives |{" "}
-        <Link to="/contact">Contact</Link>
+        <Link to="/contact">Contact</Link> |
+        <Link to="/backoffice">Backoffice</Link>
       </nav>
       <p>
         © 2022, designed and developed by{" "}
