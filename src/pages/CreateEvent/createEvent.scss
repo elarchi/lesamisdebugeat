@@ -1,0 +1,61 @@
+.createEvent-page {
+  display: flex;
+  flex-direction: column;
+
+  button {
+    background-color: #75913d;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 100%;
+    font-size: 22px;
+    font-weight: 100;
+    &:hover {
+      background-color: white;
+      border: solid #75913d 1px;
+      color: #75913d;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+  }
+}
+
+form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h3,
+  label {
+    font-family: "inter";
+    font-weight: 500;
+  }
+
+  .input-style {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    display: flex;
+
+    input {
+      all: unset;
+      border: none;
+      font-size: 24px;
+      font-family: "inter";
+      font-size: 18px;
+      border: black solid 1px;
+      height: 20px;
+      padding: 10px;
+    }
+    .description-area {
+      all: unset;
+      height: 400px;
+      border: black solid 1px;
+      font-size: 24px;
+      font-family: "inter";
+      font-size: 18px;
+      padding: 10px;
+    }
+  }
+}

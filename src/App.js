@@ -13,6 +13,8 @@ import Events from "./pages/Events/Events";
 import Publications from "./pages/Publications/Publications";
 import Status from "./pages/Status/Status";
 import Backoffice from "./pages/Backoffice/Backoffice";
+import CreateContent from "./pages/CreateContent/CreateContent";
+import CreateEvent from "./pages/CreateEvent/CreateEvent";
 
 function App() {
   return (
@@ -28,6 +30,14 @@ function App() {
           <Route path="/publications" element={<Publications />} />
           <Route path="/who-are-we/status" element={<Status />} />
           <Route path="/backoffice" element={<Backoffice />} />
+          <Route
+            path="/backoffice/create-content"
+            element={<CreateContent />}
+          />
+          <Route
+            path="/backoffice/create-content/event"
+            element={<CreateEvent />}
+          />
         </Routes>
         <Footer />
       </Router>

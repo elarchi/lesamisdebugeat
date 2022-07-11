@@ -1,0 +1,187 @@
+import axios from "axios";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+import "./createEvent.scss";
+
+const CreateEvent = () => {
+  const [title, setTitle] = useState("");
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
+  const [location, setLocation] = useState("");
+  const [URLpictures, setURLpictures] = useState("");
+  const [description, setDescription] = useState("");
+  const [price, setPrice] = useState("");
+  const [URLprogrammation, setURLprog] = useState("");
+  const [carousel, setCarousel] = useState(false);
+  const [comingSoonEvent, setComingSoonEvent] = useState(false);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      console.log(2);
+      const response = await axios.post(
+        `https://lesamisdebugeat.herokuapp.com/backoffice/create-event`,
+        {
+          //title:title,
+          //event
+          title,
+          date,
+          time,
+          location,
+          URLpictures,
+          description,
+          price,
+          display: {
+            carousel,
+            comingSoonEvent,
+          },
+          URLprogrammation,
+        }
+      );
+      console.log(4);
+      console.log(response.data);
+    } catch (error) {
+      console.log("erreur catch");
+      console.log(error.message);
+    }
+  };
+
+  return (
+    <div className="createEvent-page container">
+      <div className="titles">
+        <h1>Créer un évènement</h1>
+        <h2>
+          <Link to="/backoffice">Accueil</Link> /{" "}
+          <Link to="/backoffice/create-content">Créer du contenu</Link> / Créer
+          un évènement
+        </h2>
+      </div>
+      <form onSubmit={handleSubmit}>
+        <div className="input-style">
+          <h3>Titre : </h3>
+          <input
+            type="text"
+            id="Titre"
+            onChange={(event) => {
+              setTitle(event.target.value);
+            }}
+          />
+        </div>
+        <div className="input-style">
+          <h3>Date : </h3>
+          <input
+            type="text"
+            id="Date"
+            placeholder="lun 24 juin 2022"
+            onChange={(event) => {
+              setDate(event.target.value);
+            }}
+          />
+        </div>
+        <div className="input-style">
+          <h3>Heure : </h3>
+          <input
+            type="text"
+            id="Heure"
+            placeholder="14:00 - 16:00"
+            onChange={(event) => {
+              setTime(event.target.value);
+            }}
+          />
+        </div>
+        <div className="input-style">
+          <h3>Lieu : </h3>
+          <input
+            type="text"
+            id="Lieu"
+            onChange={(event) => {
+              setLocation(event.target.value);
+            }}
+          />
+        </div>
+        <div className="input-style">
+          <h3>Description : </h3>
+          <textarea
+            type="textarea"
+            id="Description"
+            className="description-area"
+            onChange={(event) => {
+              setDescription(event.target.value);
+            }}
+          />
+        </div>
+        <div className="input-style">
+          <h3>Lien URL du programme : </h3>
+          <input
+            type="text"
+            id="Lien du programme"
+            onChange={(event) => {
+              setURLprog(event.target.value);
+            }}
+          />
+        </div>
+        <div className="input-style">
+          <h3>Prix : </h3>{" "}
+          <input
+            type="text"
+            id="Prix"
+            onChange={(event) => {
+              setPrice(event.target.value);
+            }}
+          />{" "}
+        </div>
+        <div className="input-style">
+          <h3>URL des images : </h3>{" "}
+          <input
+            type="text"
+            id="URL des images"
+            onChange={(event) => {
+              setURLpictures(event.target.value);
+            }}
+          />
+        </div>
+
+        <div className="display">
+          <h3>Où l'évènement doit-il apparaître ?</h3>
+
+          <div className="checkbox-style">
+            <input
+              type="checkbox"
+              id="Carousel"
+              onClick={() => {
+                if (carousel === false) {
+                  setCarousel(true);
+                } else {
+                  setCarousel(false);
+                }
+              }}
+            />
+
+            <label htmlFor="Carousel">Accueil/Carrousel</label>
+          </div>
+          <div className="chekbox-style">
+            <input
+              type="checkbox"
+              id="ComingSoonEvent"
+              onClick={() => {
+                if (comingSoonEvent === false) {
+                  setComingSoonEvent(true);
+                } else {
+                  setComingSoonEvent(false);
+                }
+              }}
+            />
+            <label htmlFor="ComingSoonEvent">Accueil/Évènement à venir</label>
+          </div>
+        </div>
+
+        <button type="submit">
+          Sauvegarder et publier l'évènement sur le site
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default CreateEvent;

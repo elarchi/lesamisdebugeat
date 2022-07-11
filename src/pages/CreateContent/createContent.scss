@@ -8,19 +8,20 @@ h1 {
   font-weight: 500;
 }
 
-.backoffice-page {
+.createContent-page {
   display: flex;
   flex-direction: column;
 
   .buttons {
     display: flex;
+    gap: 30px;
     justify-content: space-between;
-
+    margin: 40px 0;
     .link-btn {
       height: 400px;
       width: 48%;
-      margin: 40px 0;
     }
+
     button {
       background-color: white;
       border: solid #75913d 1px;
@@ -29,6 +30,7 @@ h1 {
       width: 100%;
       font-size: 30px;
       font-weight: 100;
+
       &:hover {
         background-color: #75913d;
         color: white;

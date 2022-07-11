@@ -17,11 +17,11 @@ const Header = () => {
       <div className="header-subtitle__div">
         <h2>Faire connaître et promouvoir le pays de Bugeat</h2>
         <div className="header-logos__div">
-          <img
+          {/* <img
             className="in-construction__img"
             src="https://res.cloudinary.com/dn7zdnm89/image/upload/v1653493909/lesAmisDuPaysDeBugeat/facebook_wbxkzo.png"
             alt="facebook-logo"
-          />
+          /> */}
 
           <a href="https://www.instagram.com/lesamisdupaysdebugeat/">
             <img
@@ -29,13 +29,6 @@ const Header = () => {
               alt="instagram-logo"
             />
           </a>
-          <Link to="/backoffice">
-            {" "}
-            <img
-              src="https://res.cloudinary.com/dfi0ky1v7/image/upload/v1657388944/header/computer-icons-back-office-management-png-favpng-kMn8LpwuRVf0Yw5ePjU0kRCaL_rkb5vx.jpg"
-              alt="backoffice-logo"
-            />
-          </Link>
         </div>
       </div>
       <nav className="header__nav">

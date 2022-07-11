@@ -1,38 +1,24 @@
-import { useState } from "react";
-import CreateEventForm from "../../components/CreateEventForm/CreateEventForm";
-import CreatePublicationForm from "../../components/CreatePublicationForm/CreatePublicationForm";
+import "./backoffice.scss";
+import { Link } from "react-router-dom";
 
 const Backoffice = () => {
-  const [createEvent, setCreateEvent] = useState(true);
-  //true: evenement
-  //false: publication
-  const [formOpened, setFormOpened] = useState(false);
-
+  const todayIs = Date();
   return (
-    <div className="backoffice-content">
-      <button
-        onClick={() => {
-          setCreateEvent(true);
-          setFormOpened(true);
-        }}
-      >
-        Je veux créer un évènement
-      </button>
-      <button
-        onClick={() => {
-          setCreateEvent(false);
-          setFormOpened(true);
-        }}
-      >
-        Je veux créer une publication
-      </button>
-      {formOpened ? (
-        createEvent ? (
-          <CreateEventForm />
-        ) : (
-          <CreatePublicationForm />
-        )
-      ) : null}
+    <div className="backoffice-page container">
+      <div className="titles">
+        {" "}
+        <h1>👋 Bienvenu.e sur le backoffice de l'association</h1>
+        <h2>{todayIs}</h2>
+      </div>
+
+      <div className="buttons">
+        <Link to="/backoffice/create-content" className="link-btn">
+          <button>Modifier ou supprimer du contenu</button>
+        </Link>
+        <Link to="/backoffice/create-content" className="link-btn">
+          <button>Créer du contenu</button>
+        </Link>
+      </div>
     </div>
   );
 };
