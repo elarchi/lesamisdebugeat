@@ -49,9 +49,6 @@ const Home = () => {
   //   },
   // };
 
-  // if (response.data.events.) ; //condition pour le carousel/comingsoonevent
-  // const [carouselEvents, setCarouselEvents] = useState([]); // stockage des events qui vont dans le carrousel
-
   return (
     <div className="home__div container">
       <div className="headband">

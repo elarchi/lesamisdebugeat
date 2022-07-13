@@ -7,15 +7,16 @@ import "swiper/css/pagination";
 //loading spinner:
 import { ClipLoader } from "react-spinners";
 
+import "./caroussel.scss";
+
 import { useState, useEffect } from "react";
 import axios from "axios";
-
-import "./caroussel.scss";
 
 const Caroussel = () => {
   // get data all-events
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
