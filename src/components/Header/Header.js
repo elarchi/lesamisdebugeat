@@ -43,7 +43,7 @@ const Header = () => {
         </Link>
         <Link to="/events" className="link">
           {" "}
-          <button>ÉVÈNEMENTS</button>
+          <button>L'AGENDA</button>
         </Link>
         <Link to="/publications" className="link">
           {" "}

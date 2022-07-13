@@ -19,7 +19,7 @@ const Caroussel = () => {
       modules={[Autoplay, Pagination]}
       loop={true}
       autoplay={{
-        delay: 3000,
+        delay: 3500,
         disableOnInteraction: false,
       }}
       className="mySwiper"
@@ -30,7 +30,7 @@ const Caroussel = () => {
     >
       <SwiperSlide>
         <img
-          src="https://res.cloudinary.com/dfi0ky1v7/image/upload/v1656957197/accueil/carrousel/Vue_de_Bugeat_pour_annonce_Festival_f7ak6z.jpg"
+          src="https://res.cloudinary.com/dfi0ky1v7/image/upload/v1656957197/EVENEMENT/Festival%20de%20Bugeat/photo%20principale/Vue_de_Bugeat_pour_annonce_Festival_f7ak6z.jpg"
           alt="festival"
         />
 

@@ -10,7 +10,7 @@ const CreateEvent = () => {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [location, setLocation] = useState("");
-  const [URLpictures, setURLpictures] = useState("");
+  const [URLpicture, setURLpicture] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [URLprogrammation, setURLprog] = useState("");
@@ -50,6 +50,8 @@ const CreateEvent = () => {
       console.log(error.message);
     }
   };
+
+  const [URLpictures, setURLpictures] = useState([]);
 
   return (
     <div className="createEvent-page container">
@@ -139,15 +141,37 @@ const CreateEvent = () => {
                 }}
               />{" "}
             </div>
-            <div className="input-style">
-              <h3>URL des images</h3>{" "}
-              <input
-                type="text"
-                id="URL des images"
-                onChange={(event) => {
-                  setURLpictures(event.target.value);
-                }}
-              />
+            <div className="URLs">
+              <h3>Gallerie photos de l'évènement</h3>
+
+              {URLpictures.map((item, i) => {
+                return (
+                  <div className="listURLS" key={i}>
+                    {item}
+                  </div>
+                );
+              })}
+              <div className="pushURL">
+                <h4>Entrer ici l'URL Cloudinary d'une image : </h4>
+                <input
+                  type="text"
+                  id="URL des images"
+                  onChange={(event) => {
+                    setURLpicture(event.target.value);
+                  }}
+                />
+                <button
+                  type="button"
+                  onClick={() => {
+                    const newURLpictures = [...URLpictures];
+                    newURLpictures.push(URLpicture);
+                    setURLpictures(newURLpictures);
+                    setURLpicture("");
+                  }}
+                >
+                  Valider et envoyer l'URL
+                </button>
+              </div>
             </div>
 
             <div className="display">
