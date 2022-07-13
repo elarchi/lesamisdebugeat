@@ -1,6 +1,7 @@
 import "./events.scss";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Events = () => {
   // get data all-events
@@ -31,14 +32,16 @@ const Events = () => {
       <div className="events-list">
         {data.events.map((item, i) => {
           return (
-            <div className="event-card" key={i}>
-              <img src={item.URLpictures[0]} alt="" />
-              <div className="event-info">
-                <h1>{item.title}</h1>
-                <h2>{item.date}</h2>
-                <h2>{item.time}</h2>
+            <Link to={`/event/${item._id}`} key={i} state={{ id: item._id }}>
+              <div className="event-card" onClick={(i) => {}}>
+                <img src={item.URLpictures[0]} alt="" />
+                <div className="event-info">
+                  <h1>{item.title}</h1>
+                  <h2>{item.date}</h2>
+                  <h2>{item.time}</h2>
+                </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
