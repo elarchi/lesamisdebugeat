@@ -36,6 +36,7 @@ const Events = () => {
               <div className="event-info">
                 <h1>{item.title}</h1>
                 <h2>{item.date}</h2>
+                <h2>{item.time}</h2>
               </div>
             </div>
           );
