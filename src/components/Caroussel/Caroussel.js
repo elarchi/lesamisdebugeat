@@ -32,7 +32,7 @@ const Caroussel = () => {
   }, []);
 
   return isLoading ? (
-    <ClipLoader color={"#75913d"} size={"100"} />
+    <ClipLoader color={"#75913d"} size={100} />
   ) : (
     <div className="carousel container">
       <Swiper

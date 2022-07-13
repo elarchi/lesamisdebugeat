@@ -30,7 +30,7 @@ const Events = () => {
   return isLoading ? (
     <div className="loading__div">
       {" "}
-      <ClipLoader color={"#75913d"} size={"100"} />
+      <ClipLoader color={"#75913d"} size={100} />
     </div>
   ) : (
     <div className="events__div container">
