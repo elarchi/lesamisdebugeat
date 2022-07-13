@@ -116,6 +116,7 @@ const CreateEvent = () => {
                 type="textarea"
                 id="Description"
                 className="description-area"
+                wrap="soft"
                 onChange={(event) => {
                   setDescription(event.target.value);
                 }}

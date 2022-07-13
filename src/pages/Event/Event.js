@@ -35,7 +35,7 @@ const Event = () => {
   return isLoading ? (
     <div>Please wait</div>
   ) : (
-    <div className="container">
+    <div className="container event-page">
       <h1>{data.title}</h1>
       <Swiper
         pagination={{
@@ -62,37 +62,41 @@ const Event = () => {
         })}
       </Swiper>
       <div className="text">
-        <p>{data.description}</p>
+        <p className="p__description">{data.description}</p>
+        <div className="border-black"></div>
         <div className="green-sqr">
           <h1>Informations</h1>
-          <div className="info">
-            <h2>Date : </h2>
-            <h2>{data.date}</h2>
-          </div>
-          <hr />
-          <div className="info">
-            <h2>Lieu : </h2>
-            <h2>{data.location}</h2>
-          </div>
-          <hr />
-          <div className="info">
-            <h2>Heure : </h2>
-            <h2>{data.time}</h2>
+          <div className="infos">
+            {" "}
+            <div className="info">
+              <h2>Date : </h2>
+              <h2>{data.date}</h2>
+            </div>
+            <hr />
+            <div className="info">
+              <h2>Lieu : </h2>
+              <h2>{data.location}</h2>
+            </div>
+            <hr />
+            <div className="info">
+              <h2>Heure : </h2>
+              <h2>{data.time}</h2>
+            </div>
           </div>
 
           <h2>{data.location}</h2>
-        </div>
-        <div className="buttons">
-          <a
-            href="https://drive.google.com/file/d/161A3vFPYpwUb7JfCcrTEmWQDVcjAZcX9/view?usp=sharing"
-            className="link"
-            download="lesamisdupaysdebugeat-formulaire-d-adhesion"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Programme
-          </a>
-          {/* <button>Inscription</button> */}
+          <div className="buttons">
+            <a
+              href="https://drive.google.com/file/d/161A3vFPYpwUb7JfCcrTEmWQDVcjAZcX9/view?usp=sharing"
+              className="link"
+              download="lesamisdupaysdebugeat-formulaire-d-adhesion"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Programme
+            </a>
+            {/* <button>Inscription</button> */}
+          </div>
         </div>
       </div>
     </div>
