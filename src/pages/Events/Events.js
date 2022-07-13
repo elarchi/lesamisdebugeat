@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+//loading spinner:
+import { ClipLoader } from "react-spinners";
+
 const Events = () => {
   // get data all-events
   const [data, setData] = useState();
@@ -24,7 +27,12 @@ const Events = () => {
     fetchData();
   }, []);
 
-  return isLoading ? null : (
+  return isLoading ? (
+    <div className="loading__div">
+      {" "}
+      <ClipLoader color={"#75913d"} size={"100"} />
+    </div>
+  ) : (
     <div className="events__div container">
       <h1>L'agenda</h1>
       {data.count} évènements sont programmés cette saison ! Parcourez l'agenda

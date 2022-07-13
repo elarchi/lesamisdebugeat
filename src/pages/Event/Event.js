@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 
+//loading spinner:
+import { ClipLoader } from "react-spinners";
+
 //carousel:
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
@@ -32,11 +35,15 @@ const Event = () => {
     };
     fetchData();
   }, [id]);
+
   return isLoading ? (
-    <div>Please wait</div>
+    <div className="loading__div">
+      <ClipLoader color={"#75913d"} size={"100"} />
+    </div>
   ) : (
     <div className="container event-page">
       <h1>{data.title}</h1>
+
       <Swiper
         pagination={{
           clickable: true,
@@ -87,8 +94,7 @@ const Event = () => {
           <h2>{data.location}</h2>
           <div className="buttons">
             <a
-              href="https://drive.google.com/file/d/161A3vFPYpwUb7JfCcrTEmWQDVcjAZcX9/view?usp=sharing"
-              className="link"
+              href={data.URLprogrammation}
               download="lesamisdupaysdebugeat-formulaire-d-adhesion"
               target="_blank"
               rel="noopener noreferrer"

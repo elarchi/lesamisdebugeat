@@ -2,6 +2,15 @@
   display: flex;
   flex-direction: column;
 
+  .loading__div {
+    height: 750px;
+    width: 1600px;
+    background-color: #75913d;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+  }
+
   .mySwiper {
     height: 500px;
     margin-bottom: 50px;

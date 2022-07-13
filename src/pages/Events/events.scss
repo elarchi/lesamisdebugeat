@@ -1,3 +1,9 @@
+.loading__div {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
 .events__div {
   font-family: "inter";
   display: flex;
@@ -11,7 +17,7 @@
     flex-direction: column;
     margin: 50px 0;
     .event-card {
-      height: 200px;
+      height: 250px;
       width: 100%;
       position: relative;
       img {

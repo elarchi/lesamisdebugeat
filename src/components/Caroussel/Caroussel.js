@@ -1,16 +1,12 @@
-//Importation des React Components (UI)
+//importation des React Components (UI):
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
-// Importation Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-//Importation des feuilles de style
+
 import "./caroussel.scss";
 
 const Caroussel = () => {
-  // faire un caroussel dynamique, qui s'adapte au nombre de photos
-  // inscrire dans une boucle, un ajout de "swiperSlide" à chaque tour
-  // le nbr de tour est envoyé en props dans le composant Caroussel
   return (
     <Swiper
       pagination={{
