@@ -1,58 +1,58 @@
-.swiper {
-  width: 90%;
+.carousel {
+  width: 80%;
   height: 100%;
+  display: flex;
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+  }
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+div.title {
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: flex-start;
-  align-items: flex-start;
-
-  div.title {
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-    // margin-left: 30px;
-    position: absolute;
-    left: 0;
-    h1,
-    h2 {
-      font-family: "inter";
-      // font-family: "Oswald", sans-serif;
-      font-weight: 300;
-      color: white;
-      text-align: left;
-    }
-    h1 {
-      font-size: 40px;
-    }
-    h2 {
-      font-size: 18px;
-    }
-
-    height: 100%;
-    width: 600px;
-    background: rgba(0, 0, 0, 0.65);
-    background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.32) 0%,
-      rgba(255, 255, 255, 0) 73%
-    );
+  flex-direction: column;
+  padding: 30px;
+  // margin-left: 30px;
+  position: absolute;
+  left: 0;
+  h1,
+  h2 {
+    font-family: "inter";
+    // font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    color: white;
+    text-align: left;
   }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+
+  height: 100%;
+  width: 600px;
+  background: rgba(0, 0, 0, 0.65);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.32) 0%,
+    rgba(255, 255, 255, 0) 73%
+  );
 }
 
 .swiper-slide img {

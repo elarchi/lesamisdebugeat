@@ -3,12 +3,8 @@ import "./home.scss";
 //Importation des components
 import Caroussel from "../../components/Caroussel/Caroussel";
 import ComingSoon from "../../components/ComingSoon/ComingSoon";
-// import { useState } from "react";
-// import axios from "axios";
 
 const Home = () => {
-  // Pour modifier un évènement, l'URL de son image, son titre, son texte : c'est ici.
-
   // const events = {
   //   left: {
   //     title: "Spectacle de clown",
@@ -53,36 +49,11 @@ const Home = () => {
   //   },
   // };
 
-  //get data all-events
-
-  // const [allEvents, setAllEvents] = useState();
-  // const [isLoading, setIsLoading] = useState(true);
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         "https://lesamisdebugeat.herokuapp.com/all-events"
-  //       );
-  //       setAllEvents(response.data);
-  //       setIsLoading(false);
-  //     } catch (error) {
-  //       console.log(error.message);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
-
-  // if (response.data.events); //condition pour le carousel/comingsoonevent
+  // if (response.data.events.) ; //condition pour le carousel/comingsoonevent
   // const [carouselEvents, setCarouselEvents] = useState([]); // stockage des events qui vont dans le carrousel
 
   return (
     <div className="home__div container">
-      {/* Mise en place du carousel de la page 
-      pour changer les images du carousel, c'est ici, en modifiant leur URL*/}
-
-      {/* Pour ajouter une image au carousel, copier-coller un composant 'SwiperSLide'déjà présent, et modifier l'URL avec l'URL de la nouvelle image. */}
-
-      {/* Pour supprimer une image du carousel, sélectionner le composant où se trouve l'URL de l'image et supprimez le. */}
       <div className="headband">
         <Caroussel />
         <div className="vertical-separator"></div>

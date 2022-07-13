@@ -1,63 +1,108 @@
-//importation des React Components (UI):
+//swiper:
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 
+//loading spinner:
+import { ClipLoader } from "react-spinners";
+
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 import "./caroussel.scss";
 
 const Caroussel = () => {
-  return (
-    <Swiper
-      pagination={{
-        clickable: true,
-      }}
-      modules={[Autoplay, Pagination]}
-      loop={true}
-      autoplay={{
-        delay: 3500,
-        disableOnInteraction: false,
-      }}
-      className="mySwiper"
-      style={{
-        "--swiper-navigation-color": "#fff",
-        "--swiper-pagination-color": "#fff",
-      }}
-    >
-      <SwiperSlide>
-        <img
-          src="https://res.cloudinary.com/dfi0ky1v7/image/upload/v1656957197/EVENEMENT/Festival%20de%20Bugeat/photo%20principale/Vue_de_Bugeat_pour_annonce_Festival_f7ak6z.jpg"
-          alt="festival"
-        />
+  // get data all-events
+  const [data, setData] = useState();
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://lesamisdebugeat.herokuapp.com/all-events"
+        );
+        setData(response.data);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+    fetchData();
+  }, []);
 
-        <div className="title">
-          <h1>
-            FESTIVAL DE BUGEAT <br />
-            ÉDITION 2022 !
-          </h1>{" "}
-          <h2>Du 1er au 13 août 2022 | Places limitées</h2>
-        </div>
-      </SwiperSlide>{" "}
-      <SwiperSlide>
-        <img
-          src="https://res.cloudinary.com/dfi0ky1v7/image/upload/v1656439428/accueil/carrousel/Artistes_et_artisans_expo_photos_-_du_4_au_13_aout_2022_-_Au_Foyer_rural_vy6gbi.jpg"
-          alt="inauguration-1"
-        />
-        <div className="title">
-          {" "}
-          <h1>
-            INAUGURATION <br />
-            DU FESTIVAL
-          </h1>{" "}
-          <h2>
-            {" "}
-            Avec l'exposition « Artistes et artisans de la pierre à Bugeat »
-          </h2>
-          <h2>Jeu 04 août 2022 | Sous le préau derrière la mairie</h2>
-        </div>{" "}
-      </SwiperSlide>
-    </Swiper>
+  return isLoading ? (
+    <ClipLoader color={"#75913d"} size={"100"} />
+  ) : (
+    <div className="carousel container">
+      <Swiper
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Autoplay, Pagination]}
+        loop={true}
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
+        className="mySwiper"
+        style={{
+          "--swiper-navigation-color": "#fff",
+          "--swiper-pagination-color": "#fff",
+        }}
+      >
+        {data.events.map((event, i) => {
+          if (event.display.carousel === true) {
+            return (
+              <SwiperSlide key={i}>
+                <img src={event.URLpictures[0]} alt="festival" />
+
+                <div className="title">
+                  <h1>
+                    FESTIVAL DE BUGEAT <br />
+                    ÉDITION 2022 !
+                  </h1>{" "}
+                  <h2>Du 1er au 13 août 2022 | Places limitées</h2>
+                </div>
+              </SwiperSlide>
+            );
+          }
+        })}
+      </Swiper>
+    </div>
   );
 };
 
 export default Caroussel;
+
+// return (
+//   <Swiper
+//     pagination={{
+//       clickable: true,
+//     }}
+//     modules={[Autoplay, Pagination]}
+//     loop={true}
+//     autoplay={{
+//       delay: 3500,
+//       disableOnInteraction: false,
+//     }}
+//     className="mySwiper"
+//     style={{
+//       "--swiper-navigation-color": "#fff",
+//       "--swiper-pagination-color": "#fff",
+//     }}
+//     key={i}
+//   >
+//     <SwiperSlide>
+//       <img src={event.URLpictures} alt="festival" />
+
+//       <div className="title">
+//         <h1>
+//           FESTIVAL DE BUGEAT <br />
+//           ÉDITION 2022 !
+//         </h1>{" "}
+//         <h2>Du 1er au 13 août 2022 | Places limitées</h2>
+//       </div>
+//     </SwiperSlide>
+//   </Swiper>
+// );
