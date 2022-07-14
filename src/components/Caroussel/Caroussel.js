@@ -11,6 +11,7 @@ import "./caroussel.scss";
 
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Caroussel = () => {
   // get data all-events
@@ -44,7 +45,7 @@ const Caroussel = () => {
         loop={true}
         autoplay={{
           delay: 3500,
-          disableOnInteraction: false,
+          disableOnInteraction: true,
         }}
         className="mySwiper"
         style={{
@@ -55,17 +56,19 @@ const Caroussel = () => {
         {data.events.map((event, i) => {
           if (event.display.carousel === true) {
             return (
-              <SwiperSlide key={i}>
-                <img src={event.URLpictures[0]} alt="festival" />
+              <Link to={`/event/${event._id}`} state={{ id: event._id }}>
+                <SwiperSlide key={i}>
+                  <img src={event.URLpictures[0]} alt="festival" />
 
-                <div className="title">
-                  <h1>
-                    FESTIVAL DE BUGEAT <br />
-                    ÉDITION 2022 !
-                  </h1>{" "}
-                  <h2>Du 1er au 13 août 2022 | Places limitées</h2>
-                </div>
-              </SwiperSlide>
+                  <div className="title">
+                    <h1>
+                      FESTIVAL DE BUGEAT <br />
+                      ÉDITION 2022 !
+                    </h1>{" "}
+                    <h2>Du 1er au 13 août 2022 | Places limitées</h2>
+                  </div>
+                </SwiperSlide>
+              </Link>
             );
           }
         })}

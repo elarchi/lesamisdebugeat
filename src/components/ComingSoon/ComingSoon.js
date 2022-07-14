@@ -2,6 +2,7 @@ import "./comingsoon.scss";
 
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 //loading spinner:
 import { ClipLoader } from "react-spinners";
@@ -36,9 +37,16 @@ const ComingSoon = () => {
           {data.events.map((event, i) => {
             if (event.display.comingSoonEvent === true) {
               return (
-                <div key={i} className="event-card">
-                  <h2>{event.title}</h2>
-                  <h3>{event.date}</h3>
+                <div key={i}>
+                  {" "}
+                  <Link
+                    to={`/event/${event._id}`}
+                    state={{ id: event._id }}
+                    className="event-card link"
+                  >
+                    <h2>{event.title}</h2>
+                    <h3>{event.date}</h3>
+                  </Link>
                   <hr />
                 </div>
               );
@@ -46,6 +54,7 @@ const ComingSoon = () => {
           })}
         </div>
       )}
+      <Link to="/events">Voir plus d'évènements</Link>
     </div>
   );
 };

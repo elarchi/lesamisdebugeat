@@ -20,6 +20,9 @@
     -ms-flex-align: center;
     -webkit-align-items: flex-start;
     align-items: flex-start;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
