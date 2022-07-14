@@ -6,11 +6,11 @@ div.green-sqr {
   padding: 20px;
   height: 460px;
   width: 300px;
-  //   border: red solid 3px;
 
   .link:hover {
     cursor: pointer;
-    color: #e10000;
+    color: black;
+    text-decoration: underline;
   }
   h1 {
     font-weight: 500;
@@ -25,5 +25,11 @@ div.green-sqr {
   h3 {
     font-style: italic;
     font-size: 14px;
+  }
+
+  .link {
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 5px;
   }
 }

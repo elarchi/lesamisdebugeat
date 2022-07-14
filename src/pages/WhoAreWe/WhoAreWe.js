@@ -1,115 +1,46 @@
 import "./whoarewe.scss";
 
-import HeadquarterCard from "../../components/HeadquarterCard/HeadquarterCard";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
+//loading spinner:
+import { ClipLoader } from "react-spinners";
+
+import HeadquarterCard from "../../components/HeadquarterCard/HeadquarterCard";
 import Timeline from "../../components/Timeline/Timeline";
 
 const WhoAreWe = () => {
-  let members = [
-    "AUGRIS Baptiste",
-    "AUPRETRE Daniel",
-    " BEAUFORT Arnaud",
-    "BERGAL-BUFFERINI Laurence",
-    "BESSETTE Jean",
-    "BLANC Danielle",
-    "BORZEIX Jean-Marie",
-    "BOURRE Jean-Marie",
-    " BOURRE Marie-Laure",
-    "BRUNOT Clarisse",
-    "CASSANAS Didier",
-    "CHAMPEAUX Jean-Louis",
-    "CHASTAGNOL Claude",
-    "CHAZALMARTIN Pierre-Marie",
-    "COUDERT Régis",
-    "EURL HEIJBOER (coiffure)",
-    "FADDA Anne-Marie",
-    "FAUCHER Jean-Pierre",
-    "FOURNET Pierre",
-    "FIANDRIN Bruno",
-    "GANDOIS Josiane",
-    "GANDOIS Pierre",
-    "GARNIER Philippe",
-    "GAYREAU Daniele",
-    "GAYREAU  Noël",
-    "GAZEAU Patrick",
-    "GIBRAT Brigitte",
-    "GODET-CHENEVAL Chantal",
-    "GUILLAUME Jean-Claude",
-    "HOARAU Henri",
-    "JAMILLOUX Bernard",
-    "LACHAUD Suzanne",
-    "LAGARDE Jean-Marie",
-    "LASSIAILLE Roger",
-    "LAVAL Patrick",
-    "LAVAL Annie",
-    "LESUEUR Marielle",
-    "LOUVRIERE-GONZALEZ Chantal",
-    "GONZALEZ-ALONSO Alain",
-    "MOURIERAS Jean-Pierre",
-    "MUHLENS Monique",
-    "NONY Antoine",
-    "NONY Caroline",
-    "NONY Gérard",
-    "NONY	Jean-Christophe",
-    "NONY	Paul",
-    "ORLIANGES  Yves",
-    "PANKER Georges",
-    "PAULY Bernard",
-    "PAUTY Pierre",
-    "PEREL Alain",
-    "PEREL Clémence",
-    "PEREL Yves",
-    "PETER Dominique",
-    "PETIT Christophe",
-    "PEYRAT Bernadette",
-    "PEYRAT François",
-    "PEYRUCHAUD Sylvie",
-    "PEYRUCHAUT Danielle",
-    "PEYRUCHAUD  Jean-Louis",
-    "PEYRUCHAUD Julien",
-    "PEYRUCHAUD Marie",
-    "PEYRUCHAUD Matthieu",
-    "POZZO DI BORGO Alexandra",
-  ];
+  //get data all-members
+  const [data, setData] = useState();
+  const [isLoading, setIsLoading] = useState(true);
 
-  return (
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://lesamisdebugeat.herokuapp.com/all-members"
+        );
+        console.log(response.data);
+        setData(response.data);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+    fetchData();
+  }, []);
+
+  return isLoading ? (
+    <div className="loading__div">
+      {" "}
+      <ClipLoader color={"#75913d"} size={100} />
+    </div>
+  ) : (
     <div className="whoarewe__div container">
       <div className="introduction">
         <div className="quote__div">
           <h1>L'association, en bref</h1>
-          {/* <p>
-            Nous sommes une association d'intérêt général qui :
-            <ul>
-              <li>
-                {" "}
-                soutient des <span>projets locaux</span>,
-              </li>
-              <li>
-                des organise des <span>évènements culturels,</span>
-              </li>
-              <li>des ateliers artistiques, </li>
-              <li>des conférences et expositions, </li>
-              <li>des soirées contes, </li>
-              <li>et édite des livres</li>
-            </ul>
-            Chacun de ces évènements est en lien avec notre patrimoine. <br />
-          </p>
-          <p>
-            Nous nous sommes fixé l’objectif :
-            <ul>
-              <li>
-                de <span>faire connaître et promouvoir le Pays de Bugeat</span>,
-              </li>
-              <li>
-                {" "}
-                contribuer à la mise en place d’
-                <span>actions sociales, éducatives, et solidaires</span>{" "}
-                d’utilité civique, au service du vivre ensemble
-                intergénérationnel.
-              </li>
-            </ul>
-          </p> */}
           <p>
             "Les amis du pays du Bugeat est une association d'intérêt général
             qui <span>soutient des projets locaux</span>,{" "}
@@ -236,10 +167,10 @@ const WhoAreWe = () => {
 
         <div className="membersList__div">
           {" "}
-          {members.map((name, index) => {
+          {data.members.map((member, i) => {
             return (
               <span>
-                {name} <br />
+                {member.firstname} {member.lastname} <br />
               </span>
             );
           })}

@@ -51,10 +51,13 @@ const ComingSoon = () => {
                 </div>
               );
             }
+            return null;
           })}
         </div>
       )}
-      <Link to="/events">Voir plus d'évènements</Link>
+      <Link to="/events" className="link">
+        ➕ Voir plus d'évènements
+      </Link>
     </div>
   );
 };

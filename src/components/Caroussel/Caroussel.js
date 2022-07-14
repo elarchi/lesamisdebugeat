@@ -70,6 +70,7 @@ const Caroussel = () => {
                 </SwiperSlide>
               );
             }
+            return null;
           })}
         </Swiper>
       </Link>
