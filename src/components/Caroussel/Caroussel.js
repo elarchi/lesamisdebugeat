@@ -37,26 +37,26 @@ const Caroussel = () => {
     <ClipLoader color={"#75913d"} size={100} />
   ) : (
     <div className="carousel container">
-      <Swiper
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Autoplay, Pagination]}
-        loop={true}
-        autoplay={{
-          delay: 3500,
-          disableOnInteraction: true,
-        }}
-        className="mySwiper"
-        style={{
-          "--swiper-navigation-color": "#fff",
-          "--swiper-pagination-color": "#fff",
-        }}
-      >
-        {data.events.map((event, i) => {
-          if (event.display.carousel === true) {
-            return (
-              <Link to={`/event/${event._id}`} state={{ id: event._id }}>
+      <Link to={`/events`} className="link">
+        <Swiper
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Autoplay, Pagination]}
+          loop={true}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
+          className="mySwiper"
+          style={{
+            "--swiper-navigation-color": "#fff",
+            "--swiper-pagination-color": "#fff",
+          }}
+        >
+          {data.events.map((event, i) => {
+            if (event.display.carousel === true) {
+              return (
                 <SwiperSlide key={i}>
                   <img src={event.URLpictures[0]} alt="festival" />
 
@@ -68,11 +68,11 @@ const Caroussel = () => {
                     <h2>Du 1er au 13 août 2022 | Places limitées</h2>
                   </div>
                 </SwiperSlide>
-              </Link>
-            );
-          }
-        })}
-      </Swiper>
+              );
+            }
+          })}
+        </Swiper>
+      </Link>
     </div>
   );
 };

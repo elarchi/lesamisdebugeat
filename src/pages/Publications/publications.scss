@@ -1,6 +1,31 @@
 .publications__div {
   font-family: "inter";
+  display: flex;
+  flex-direction: column;
   h1 {
     font-weight: 500;
+    font-size: 28px;
+    margin: 50px 0px;
+  }
+
+  .publications-list {
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+
+    .publication-card {
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        font-size: 20px;
+      }
+
+      &:hover {
+        color: #e10000;
+        border-bottom: #e10000 solid 1px;
+      }
+    }
   }
 }

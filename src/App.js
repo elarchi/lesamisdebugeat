@@ -17,6 +17,7 @@ import CreateContent from "./pages/CreateContent/CreateContent";
 import CreateEvent from "./pages/CreateEvent/CreateEvent";
 import CreatePublication from "./pages/CreatePublication/CreatePublication";
 import Event from "./pages/Event/Event";
+import Publication from "./pages/Publication/Publication";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
             element={<CreatePublication />}
           />
           <Route path="/event/:id" element={<Event />} />
+          <Route path="/publication/:id" element={<Publication />} />
         </Routes>
         <Footer />
       </Router>

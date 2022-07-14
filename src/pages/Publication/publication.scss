@@ -1,4 +1,4 @@
-.event-page {
+.publication-page {
   display: flex;
   flex-direction: column;
 
@@ -9,18 +9,6 @@
     display: flex;
     justify-content: center;
     padding-top: 50px;
-  }
-
-  .mySwiper {
-    height: 500px;
-    margin-bottom: 50px;
-    width: 100%;
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
   }
 
   .text {

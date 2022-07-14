@@ -1,9 +1,9 @@
 import axios from "axios";
+import "./createEvent.scss";
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ContentWellCreated from "../../components/ContentWellCreated/ContentWellCreated";
-
-import "./createEvent.scss";
 
 const CreateEvent = () => {
   const [title, setTitle] = useState("");
@@ -22,7 +22,6 @@ const CreateEvent = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      console.log(2);
       const response = await axios.post(
         `https://lesamisdebugeat.herokuapp.com/backoffice/create-event`,
         {
@@ -42,11 +41,9 @@ const CreateEvent = () => {
           URLprogrammation,
         }
       );
-      console.log(4);
       console.log(response.data);
       setSuccessModal(true);
     } catch (error) {
-      console.log("erreur catch");
       console.log(error.message);
     }
   };
