@@ -5,17 +5,12 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Subscription = () => {
-  // const [errorMessage, setErrorMessage] = useState("");
-  //"Ce membre est déjà inscrit"
-  //"Merci d'entrer votre prénom, nom et adresse email"
-  //"Merci d'accepter le règlement"
-
   const [paperForm, setPaperForm] = useState(0);
   //0 not downloaded
   //1 downloaded
 
   return (
-    <div className="container">
+    <div className="container subscription__div">
       <div className="quote__div ">
         <p>
           <span className="big-quote__span">« </span>L’adhésion est de{" "}
@@ -39,7 +34,7 @@ const Subscription = () => {
 
         <a
           href="https://res.cloudinary.com/dfi0ky1v7/raw/upload/v1656447522/nous-rejoindre/Bulletin_d_adh%C3%A9sion_ADPDB_ositfb.docx"
-          className="link"
+          className="red__button"
           download="lesamisdupaysdebugeat-formulaire-d-adhesion"
           target="_blank"
           rel="noopener noreferrer"
