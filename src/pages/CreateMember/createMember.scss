@@ -49,4 +49,11 @@
       transition: 0.3s;
     }
   }
+
+  .error {
+    margin: 0 auto;
+    span {
+      color: #e10000;
+    }
+  }
 }
