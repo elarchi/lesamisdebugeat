@@ -1,0 +1,52 @@
+.createMember-page {
+  display: flex;
+  flex-direction: column;
+  font-family: "inter";
+  margin-bottom: 50px;
+  margin-top: 20px;
+  h1 {
+    font-size: 24px;
+  }
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .input__div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      input {
+        width: 85%;
+        height: 30px;
+      }
+    }
+  }
+
+  .checkboxs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .checkbox__div {
+      display: flex;
+      gap: 20px;
+    }
+  }
+  button {
+    background-color: #75913d;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 100%;
+    font-size: 22px;
+    font-weight: 100;
+    &:hover {
+      background-color: white;
+      border: solid #75913d 1px;
+      color: #75913d;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+  }
+}

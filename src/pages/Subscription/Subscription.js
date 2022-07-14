@@ -10,29 +10,13 @@ const Subscription = () => {
   //"Merci d'entrer votre prénom, nom et adresse email"
   //"Merci d'accepter le règlement"
 
-  const [formIsOpen, setFormIsOpen] = useState(false);
-
-  const handleForm = () => {
-    if (formIsOpen === false) {
-      setFormIsOpen(true);
-    } else {
-      setFormIsOpen(false);
-    }
-  };
-
   const [paperForm, setPaperForm] = useState(0);
   //0 not downloaded
   //1 downloaded
 
   return (
-    <div
-      className={
-        formIsOpen === true
-          ? "subscription__div container blur"
-          : "subscription__div container "
-      }
-    >
-      <div className="quote__div">
+    <div className="container">
+      <div className="quote__div ">
         <p>
           <span className="big-quote__span">« </span>L’adhésion est de{" "}
           <span>10 euros</span>.<br /> Il est d’usage j’ajouter une somme, à
@@ -47,9 +31,10 @@ const Subscription = () => {
         </Link>
       </div>
       <div className="options__div">
-        <button className="green__button" onClick={handleForm}>
-          Adhésion en ligne
-        </button>
+        <Link to="/subscription/online">
+          {" "}
+          <button className="green__button">Adhésion en ligne</button>
+        </Link>
         <span>OU</span>
 
         <a
@@ -75,53 +60,6 @@ const Subscription = () => {
           téléchargements.
         </span>
       </div>
-
-      {/* <div className="rules__div">
-       
-        
-      </div> */}
-      {formIsOpen ? (
-        <form action="" className="form">
-          <div className="col__div">
-            <div className="txt">Prénom</div>
-            <input type="text" />
-          </div>
-          <div className="col__div">
-            <div className="txt">Nom de famille</div>
-            <input type="text" />
-          </div>
-          <div className="col__div">
-            <div className="txt">Email</div>
-            <input type="text" />
-          </div>
-          <div className="row__div">
-            <div className="txt">
-              {" "}
-              Photo d'identité <span>(facultatif)</span> :
-            </div>
-            <button className="updload__button">
-              Sélectionnez une photo depuis votre ordinateur
-            </button>
-          </div>
-          <div className="row__div">
-            <input type="checkbox" />
-            <div className="txt">
-              Je confirme avoir lu et accepté le règlement de l'association Les
-              Amis du Pays de Bugeat.
-            </div>
-          </div>
-          <div className="row__div">
-            <input type="checkbox" />
-            <div className="txt">
-              J'autorise l'association Les Amis du Pays de Bugeat à reproduire
-              et exploiter mon image ﬁxée dans le cadre de photographies lors
-              des différents évènements.
-            </div>
-          </div>
-          <button>J'adhère à l'association</button>
-          {/* <span>{errorMessage}</span>  */}
-        </form>
-      ) : null}
     </div>
   );
 };

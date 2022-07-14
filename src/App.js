@@ -18,6 +18,7 @@ import CreateEvent from "./pages/CreateEvent/CreateEvent";
 import CreatePublication from "./pages/CreatePublication/CreatePublication";
 import Event from "./pages/Event/Event";
 import Publication from "./pages/Publication/Publication";
+import CreateMember from "./pages/CreateMember/CreateMember";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           />
           <Route path="/event/:id" element={<Event />} />
           <Route path="/publication/:id" element={<Publication />} />
+          <Route path="/subscription/online" element={<CreateMember />} />
         </Routes>
         <Footer />
       </Router>

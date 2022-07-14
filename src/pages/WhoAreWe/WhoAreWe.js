@@ -141,12 +141,42 @@ const WhoAreWe = () => {
 
         <div className="cards__div ">
           <HeadquarterCard
-            title={"Trésorier adjoint"}
-            name={"Bernard Jamilloux"}
+            title={"Président fondateur"}
+            name={"Jean-Marie Bourre"}
             telephone={"-"}
-            email={" jamillouxb@gmail.com"}
+            email={"-"}
             urlImage={
-              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654622510/qui-sommes-nous/bureau/bernard-jamilloux_tresorier-adjoint_fqbcne.jpg"
+              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1657809889/qui-sommes-nous/bureau/Jean-Marie_Bourre_Pre%CC%81sident_fondateur_de_l_Association_des_ADPDB_j7uqk3.png"
+            }
+          />
+
+          <HeadquarterCard
+            title={"Président d'honneur"}
+            name={"Jean-Marie Borzeix"}
+            telephone={"-"}
+            email={"-"}
+            urlImage={
+              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1657809890/qui-sommes-nous/bureau/Jean-Marie_Borzeix_President_d_honneur_des_ADPDB_ctcxfv.png"
+            }
+          />
+
+          <HeadquarterCard
+            title={"Président d'honneur, v-président"}
+            name={"Yves Pérel"}
+            telephone={"06-79-97-83-12"}
+            email={"perel.yves@wanadoo.fr"}
+            urlImage={
+              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654622510/qui-sommes-nous/bureau/yves-perel_vice-president_1_znlnjj.jpg"
+            }
+          />
+
+          <HeadquarterCard
+            title={"Présidente"}
+            name={"Sophie Van Roekeghem"}
+            telephone={"06-80-47-21-90"}
+            email={"svanroek@gmail.com"}
+            urlImage={
+              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1657809889/qui-sommes-nous/bureau/Sophie_vR_Pre%CC%81sidente_des_ADPDB_arsiz0.jpg"
             }
           />
 
@@ -162,7 +192,7 @@ const WhoAreWe = () => {
 
           <HeadquarterCard
             title={"Secrétaire adjoint"}
-            name={"Jacques Sadern"}
+            name={"Jean-Pierre Mourieras"}
             telephone={"-"}
             email={"-"}
             urlImage={
@@ -181,32 +211,12 @@ const WhoAreWe = () => {
           />
 
           <HeadquarterCard
-            title={"Président d'honneur"}
-            name={"Jean-Marie Borzeix"}
+            title={"Trésorier adjoint"}
+            name={"Bernard Jamilloux"}
             telephone={"-"}
-            email={"-"}
+            email={" jamillouxb@gmail.com"}
             urlImage={
-              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654618477/sample.jpg"
-            }
-          />
-
-          <HeadquarterCard
-            title={"Président d'honneur"}
-            name={"Jean-Marie Bourre"}
-            telephone={"-"}
-            email={"-"}
-            urlImage={
-              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654618477/sample.jpg"
-            }
-          />
-
-          <HeadquarterCard
-            title={"Secrétaire adjoint"}
-            name={"Jean-Pierre Mourieras"}
-            telephone={"-"}
-            email={"-"}
-            urlImage={
-              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654618477/sample.jpg"
+              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654622510/qui-sommes-nous/bureau/bernard-jamilloux_tresorier-adjoint_fqbcne.jpg"
             }
           />
 
@@ -216,27 +226,7 @@ const WhoAreWe = () => {
             telephone={"06-76-96-17-46"}
             email={"pgazeau33@gmail.com"}
             urlImage={
-              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654618477/sample.jpg"
-            }
-          />
-
-          <HeadquarterCard
-            title={"Présidente"}
-            name={"Sophie Van Roekeghem"}
-            telephone={"06-80-47-21-90"}
-            email={"svanroek@gmail.com"}
-            urlImage={
-              "https://res.cloudinary.com/dn7zdnm89/image/upload/v1653574651/lesAmisDuPaysDeBugeat/Sophie_identite%CC%81_dagbz3.png"
-            }
-          />
-
-          <HeadquarterCard
-            title={"Vice-Président"}
-            name={"Yves Pérel"}
-            telephone={"06-79-97-83-12"}
-            email={"perel.yves@wanadoo.fr"}
-            urlImage={
-              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1654622510/qui-sommes-nous/bureau/yves-perel_vice-president_1_znlnjj.jpg"
+              "https://res.cloudinary.com/dfi0ky1v7/image/upload/v1655762154/qui-sommes-nous/bureau/Patrick-Gazeau_Ingenieur-son-et-lumieres_gd3qxm.jpg"
             }
           />
         </div>

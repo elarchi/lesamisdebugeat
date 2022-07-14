@@ -11,7 +11,7 @@ const Footer = () => {
         <Link to="/">Accueil </Link> |{" "}
         <Link to="/who-are-we">Qui sommes-nous ?</Link> |{" "}
         <Link to="/subscription">Devenir membre</Link> |{" "}
-        <Link to="/events">Évènements</Link> |{" "}
+        <Link to="/events">L'agenda</Link> |{" "}
         <Link to="/publications">Publications</Link> | Archives |{" "}
         <Link to="/contact">Contact</Link> |
         <Link to="/backoffice">Backoffice</Link>
