@@ -3,6 +3,7 @@ import "./createEvent.scss";
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
+
 import ContentWellCreated from "../../components/ContentWellCreated/ContentWellCreated";
 
 const CreateEvent = () => {
